@@ -18,8 +18,13 @@
     }
     img.banner {
       width: 100%;
-      max-width: 1200px;
       height: auto;
+      object-fit: contain; /* ensures no cropping */
+      display: block;
+      margin: 0 auto;
+    }
+    main {
+      padding: 20px;
     }
   </style>
 </head>
@@ -30,7 +35,10 @@
   </header>
 
   <main>
-    <img src="Official_Sharon_Crady_Banner_1920x1080.png" alt="Official Sharon Crady Banner" class="banner">
+    <img src="Official_Sharon_Crady_Banner_1920x1080.png" 
+         alt="Official Sharon Crady Banner" 
+         class="banner">
+
     <h2>Welcome!</h2>
     <p>This site is the home of my personal brand, projects, and creative updates.</p>
   </main>
