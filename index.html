@@ -16,26 +16,43 @@
       background-color: #222;
       color: white;
       padding: 20px;
+      text-align: center; /* centers header text */
     }
 
     img.banner {
-      max-width: 1536px;   /* limit size to your preferred width */
-      max-height: 1020px;  /* limit size to your preferred height */
-      width: 100%;         /* scales down responsively */
+      max-width: 1536px;  /* or 1920px if you go back to the big banner */
+      max-height: 1020px;
+      width: 100%;
       height: auto;
-      object-fit: contain; /* avoids stretching/cropping */
+      object-fit: contain; /* avoids cropping */
       display: block;
-      margin: 0 auto;      /* centers image */
+      margin: 0 auto; /* centers image */
     }
 
     main {
       padding: 20px;
+    }
+
+    /* Contact Button */
+    .contact-button {
+      display: inline-block;
+      background-color: #333;  /* dark button */
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    .contact-button:hover {
+      background-color: #555; /* lighter on hover */
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Official Sharon Crady</h1>
+    <p>A Voice. A Vision. A Brand in the Making.</p>
     <p>Personal brand • Projects • Updates</p>
   </header>
 
@@ -46,6 +63,9 @@
 
     <h2>Welcome!</h2>
     <p>This site is the home of my personal brand, projects, and creative updates.</p>
+
+    <!-- Contact Button -->
+    <a href="mailto:yourname@email.com" class="contact-button">Contact Us</a>
   </main>
 </body>
 </html>
