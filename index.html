@@ -11,18 +11,23 @@
       text-align: center;
       background-color: #f4f4f4;
     }
+
     header {
       background-color: #222;
       color: white;
       padding: 20px;
     }
+
     img.banner {
-      width: 100%;
+      max-width: 1536px;   /* limit size to your preferred width */
+      max-height: 1020px;  /* limit size to your preferred height */
+      width: 100%;         /* scales down responsively */
       height: auto;
-      object-fit: contain; /* ensures no cropping */
+      object-fit: contain; /* avoids stretching/cropping */
       display: block;
-      margin: 0 auto;
+      margin: 0 auto;      /* centers image */
     }
+
     main {
       padding: 20px;
     }
