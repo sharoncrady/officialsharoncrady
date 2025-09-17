@@ -16,36 +16,41 @@
       background-color: #222;
       color: white;
       padding: 20px;
-      text-align: center; /* centers header text */
+      text-align: center;
     }
 
     img.banner {
-      max-width: 1536px;  /* or 1920px if you go back to the big banner */
+      max-width: 1536px; /* adjust to your preferred size */
       max-height: 1020px;
-      width: 100%;
+      width: 100%;       /* scales down responsively */
       height: auto;
-      object-fit: contain; /* avoids cropping */
+      object-fit: contain; /* avoids stretching/cropping */
       display: block;
-      margin: 0 auto; /* centers image */
+      margin: 0 auto;
     }
 
     main {
       padding: 20px;
     }
 
-    /* Contact Button */
-    .contact-button {
-      display: inline-block;
-      background-color: #333;  /* dark button */
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 5px;
+    /* Contact Button Styling */
+    .button-container {
       margin-top: 20px;
     }
+
+    .contact-button {
+      display: inline-block;
+      background-color: #333;
+      color: #fff;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
     .contact-button:hover {
-      background-color: #555; /* lighter on hover */
+      background-color: #555;
     }
   </style>
 </head>
@@ -56,8 +61,8 @@
   </header>
 
   <main>
-    <img src="Creative Empowerment Workspace.png" 
-         alt="Official Sharon Crady Banner" 
+    <img src="Creative Empowerment Workspace.png"
+         alt="Official Sharon Crady Banner"
          class="banner">
 
     <h2>Welcome!</h2>
@@ -65,19 +70,14 @@
 
     <!-- Contact Button -->
     <h2>Contact Me</h2>
-  <form action="https://formspree.io/f/xkgvlzwd" method="POST">
-    <label for="name">Your Name:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
-
-    <label for="email">Your Email:</label><br>
-    <input type="email" id="email" name="_replyto" required><br><br>
-
-    <label for="message">Your Message:</label><br>
-    <textarea id="message" name="message" rows="5" required></textarea><br><br>
-
-    <button type="submit">Send</button>
-  </form>
-
+    <div class="button-container">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSc63yvKkwsRF5BKI8..." 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="contact-button">
+         Contact Us
+      </a>
+    </div>
   </main>
 </body>
 </html>
