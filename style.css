@@ -171,6 +171,27 @@ main {
   color: white;
 }
 
+/* Etsy button style */
+.etsy-btn {
+  background-color: #f1641e; /* Etsy orange */
+  color: white;
+}
+
+.etsy-btn:hover {
+  background-color: #d35410; /* darker orange on hover */
+}
+
+/* Frequense button style */
+.frequense-btn {
+  background-color: #00a896; /* calming teal */
+  color: white;
+}
+
+.frequense-btn:hover {
+  background-color: #007f6f; /* darker teal on hover */
+}
+
+
 .frequense-btn:hover {
   background-color: #007f6f;
 }
