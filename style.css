@@ -195,3 +195,24 @@ main {
 .frequense-btn:hover {
   background-color: #007f6f;
 }
+
+
+/* Etsy button style */
+a.btn.etsy-btn {
+  background-color: #f1641e !important; /* Etsy orange */
+  color: white !important;
+}
+
+a.btn.etsy-btn:hover {
+  background-color: #d35410 !important; /* darker orange */
+}
+
+/* Frequense button style */
+a.btn.frequense-btn {
+  background-color: #00a896 !important; /* Teal wellness */
+  color: white !important;
+}
+
+a.btn.frequense-btn:hover {
+  background-color: #007f6f !important; /* darker teal */
+}
