@@ -82,3 +82,26 @@ main {
   padding: 14px 10px;
   font-size: 14px;
 }
+
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.site-nav .btn {
+  background-color: #23a455;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.site-nav .btn:hover {
+  background-color: #1d8a46;
+  transform: translateY(-2px);
+}
