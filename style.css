@@ -128,3 +128,31 @@ main {
   transform: translateY(-2px);
 }
 
+
+.links {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.links p {
+  margin: 10px 0 20px;
+  font-size: 1rem;
+  color: #ddd;  /* softer text under your dark background */
+}
+
+.etsy-btn {
+  background-color: #f1641e; /* Etsy orange */
+}
+
+.etsy-btn:hover {
+  background-color: #d35410;
+}
+
+.frequense-btn {
+  background-color: #00a896; /* Teal wellness color */
+}
+
+.frequense-btn:hover {
+  background-color: #007f6f;
+}
+
