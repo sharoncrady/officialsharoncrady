@@ -156,3 +156,21 @@ main {
   background-color: #007f6f;
 }
 
+
+.etsy-btn {
+  background-color: #f1641e; /* Etsy orange */
+  color: white;
+}
+
+.etsy-btn:hover {
+  background-color: #d35410;
+}
+
+.frequense-btn {
+  background-color: #00a896; /* Teal for wellness */
+  color: white;
+}
+
+.frequense-btn:hover {
+  background-color: #007f6f;
+}
