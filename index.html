@@ -1,129 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Official Sharon Crady</title>
+
+  <!-- Your external stylesheet (keep this if you have one) -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Page-specific styles & overrides -->
   <style>
+    /* Base layout */
+    :root { --bg:#111; --panel:#1a1a1a; --text:#eee; --muted:#cfcfcf; }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       text-align: center;
-      background-color: #f4f4f4;
     }
 
     header {
-      background-color: #222;
-      color: white;
-      padding: 20px;
-      text-align: center;
+      background: var(--panel);
+      padding: 20px 16px 10px;
+      border-bottom: 1px solid #2a2a2a;
     }
 
-    img.banner {
-      max-width: 1536px; /* adjust to your preferred size */
-      max-height: 1020px;
-      width: 100%;       /* scales down responsively */
+    main { padding: 24px 16px; }
+
+    /* NAV */
+    .site-nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 8px 0 16px;
+    }
+    .btn {
+      display: inline-block;
+      background: #23a455;          /* default green */
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background .2s, transform .1s, box-shadow .2s;
+    }
+    .btn:hover { background:#1d8a46; transform: translateY(-2px); }
+
+    /* Current page highlight */
+    .site-nav .btn[aria-current="page"] {
+      outline: 2px solid #178a40;
+      box-shadow: 0 0 0 3px rgba(23,138,64,.25);
+    }
+
+    /* Headings & copy */
+    h1 { margin: 10px 0 6px; font-size: 36px; }
+    .welcome p { color: var(--muted); margin: 0 auto 12px; max-width: 780px; }
+
+    /* Explore section */
+    .links { margin: 12px 0 26px; }
+    .links p { color: var(--muted); margin: 8px 0 18px; }
+    .links .btn { margin: 8px 10px; }
+
+    /* Color-coded shop buttons (override green) */
+    a.btn.etsy-btn {
+      background-color: #f1641e !important;  /* Etsy orange */
+      color: #fff !important;
+    }
+    a.btn.etsy-btn:hover { background-color: #d35410 !important; }
+
+    a.btn.frequense-btn {
+      background-color: #00a896 !important;  /* wellness teal */
+      color: #fff !important;
+    }
+    a.btn.frequense-btn:hover { background-color: #007f6f !important; }
+
+    /* Banner image */
+    .banner {
+      max-width: 1536px;     /* adjust to taste */
+      width: 100%;
       height: auto;
-      object-fit: contain; /* avoids stretching/cropping */
+      object-fit: contain;
       display: block;
       margin: 0 auto;
+      border-radius: 4px;
     }
 
-    main {
-      padding: 20px;
+    /* Footer */
+    footer {
+      background: var(--panel);
+      border-top: 1px solid #2a2a2a;
+      padding: 18px 12px;
+      color: #bbb;
     }
 
-    /* Contact Button Styling */
-    .button-container {
-      margin-top: 20px;
-    }
+    /* Social links (optional icons placeholders) */
+    .social-links { margin-top: 8px; display: flex; gap: 12px; justify-content: center; }
+    .social-links a { color:#9ad1ff; text-decoration: none; }
+    .social-links a:hover { text-decoration: underline; }
 
-    .contact-button {
-      display: inline-block;
-      background-color: #333;
-      color: #fff;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-    }
-
-    .contact-button:hover {
-      background-color: #555;
+    @media (max-width: 520px) {
+      h1 { font-size: 30px; }
     }
   </style>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
-    <nav>
-  <a href="index.html"><button>Home</button></a>
-  <a href="about.html"><button>About</button></a>
-  <a href="portfolio.html"><button>Portfolio</button></a>
-  <a class="btn" href="https://forms.gle/your-form-link" target="_blank">Contact</a>
-</nav>
+    <nav class="site-nav">
+      <a class="btn" href="index.html" aria-current="page">Home</a>
+      <a class="btn" href="about.html">About</a>
+      <a class="btn" href="portfolio.html">Portfolio</a>
+      <!-- CONTACT opens your Google Form in a new tab -->
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSc63yvKkwsRF5BKI8FHCPaE7WyARU3JxQn3ad0gf0qZw92mlg/viewform?usp=header" target="_blank" rel="noopener">Contact</a>
+    </nav>
+
     <h1>Official Sharon Crady</h1>
-    <!-- Welcome message moved up here -->
+
     <section class="welcome">
       <h2>Welcome!</h2>
       <p>This site is the home of my personal brand, projects, and creative updates.</p>
-      <section class="links">
-  <h2>Explore My Shops</h2>
-     <p>Find my <strong>digital printables</strong> on Etsy or explore <strong>wellness products</strong> with Frequense.</p>  
-  <a class="btn etsy-btn" href="https://www.etsy.com/shop/SharonsPrintables" target="_blank">Visit My Etsy Shop</a>
-  <a class="btn frequense-btn" href="https://frequense.com/sharoncrady" target="_blank">Shop Frequense</a>
-</section>
     </section>
-    
+
+    <section class="links">
+      <h2>Explore My Shops</h2>
+      <p>Find my <strong>digital printables</strong> on Etsy or explore <strong>wellness products</strong> with Frequense.</p>
+
+      <a class="btn etsy-btn" href="https://www.etsy.com/shop/SharonsPrintables" target="_blank" rel="noopener">Visit My Etsy Shop</a>
+      <a class="btn frequense-btn" href="https://frequense.com/sharoncrady" target="_blank" rel="noopener">Shop Frequense</a>
+    </section>
   </header>
 
   <main>
-    <img src="Creative Empowerment Workspace.png"
-         alt="Official Sharon Crady Banner"
-         class="banner">
-
-    <main>
-   <main>
-    
-
-    <!-- Contact button -->
-    <section class="contact">
-      <h2>Contact Me</h2>
-      <div class="button-container">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdecMKuec02bDC6RERiGtcLOEE8BWqQQLlR8FJz809nOeZEpw/viewform"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="contact-button">
-          Contact Us
-        </a>
-      </div>
-    </section>
+    <!-- Keep your banner file name the same as your current asset -->
+    <img
+      src="Creative Empowerment Workspace.png"
+      alt="Official Sharon Crady Banner"
+      class="banner"
+    >
   </main>
 
-    
-  </main>
   <footer>
-  <div class="footer-content">
-    <p>&copy; 2025 Official Sharon Crady. All rights reserved.</p>
-    
-    </div>
+    <div class="footer-content">
+      <p>© 2025 Official Sharon Crady. All rights reserved.</p>
 
-    <div class="social-links">
-      <a href="https://facebook.com/yourprofile" target="_blank">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://twitter.com/yourprofile" target="_blank">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://instagram.com/yourprofile" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://youtube.com/yourchannel" target="_blank">
-        <i class="fab fa-youtube"></i>
-      </a>
+      <!-- Optional: replace with your real profiles when ready -->
+      <div class="social-links">
+        <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://youtube.com/yourchannel" target="_blank" rel="noopener">YouTube</a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
+
 </body>
 </html>
