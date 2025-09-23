@@ -235,3 +235,20 @@ a.btn.frequense-btn:hover {
   border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,.2);
 }
 
+
+/* Profile picture styling */
+.profile-pic-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.profile-pic {
+  width: 200px;       /* adjust size */
+  height: auto;
+  border-radius: 12px; /* soft rounded corners */
+  object-fit: cover;   /* crops top/bottom cleanly */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+
