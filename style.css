@@ -216,3 +216,12 @@ a.btn.frequense-btn {
 a.btn.frequense-btn:hover {
   background-color: #007f6f !important; /* darker teal */
 }
+
+
+.about img {
+  display: block;
+  margin: 0 auto 20px auto;  /* centers and adds space below */
+  border-radius: 10px;       /* keeps nice rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* soft shadow */
+}
+
