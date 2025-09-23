@@ -225,3 +225,13 @@ a.btn.frequense-btn:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* soft shadow */
 }
 
+
+.about .profile-pic-wrapper { 
+  width:150px; height:200px; overflow:hidden;
+  margin: 0 auto 24px auto; border-radius:10px;
+}
+.about .profile-pic {
+  width:100%; height:auto; margin-top:-40px;
+  border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+
