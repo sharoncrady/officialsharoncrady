@@ -3,247 +3,153 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Official Sharon Crady™ Studios & Network</title>
-  <meta name="description" content="A friendly, beginner-positive VO community and job gateway—showcases, practice prompts, micro-gigs, and a safe on-ramp from hobby to paid work." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>Official Sharon Crady™ — Studios & Network</title>
+  <meta name="description" content="Official Sharon Crady™ Studios & Network — an inclusive community for voice actors, creators, and brand-friendly UGC talent to learn, collaborate, and get booked." />
+  <link rel="canonical" href="/studios-network/" />
   <style>
     :root{
-      --ink:#0c0f14;
-      --ink-2:#1a2030;
-      --muted:#7e8aa0;
-      --brand:#36c1b8;      /* teal */
-      --accent:#b99a3c;     /* warm gold */
-      --bg:#0b0e12;
-      --card:#11161f;
-      --ring:rgba(54,193,184,.25);
-      --ok:#39c071;
-      --warn:#ffce5a;
+      --accent-1:#1fb6ff;  /* teal-cyan */
+      --accent-2:#8a6cff;  /* lavender-violet */
+      --text:#0e0f12;
+      --muted:#6b7280;
+      --bg:#ffffff;
+      --ring: rgba(31,182,255,.35);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --text:#f6f7fb; --muted:#aeb4c2; --bg:#0c0e12; --ring: rgba(138,108,255,.35);
+      }
     }
     *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:#e8eef7;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}
-    a{color:var(--brand);text-decoration:none}
+    html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif}
+    a{color:var(--accent-1);text-decoration:none}
     a:hover{text-decoration:underline}
-    .wrap{max-width:1050px;margin:auto;padding:28px 20px}
-    header{
-      background: radial-gradient(1200px 400px at 10% -10%, rgba(54,193,184,.20), transparent),
-                  radial-gradient(900px 280px at 90% -20%, rgba(185,154,60,.25), transparent),
-                  linear-gradient(180deg, #0b0e12 0%, #0d1117 100%);
-      border-bottom:1px solid #182032;
-    }
-    nav{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 0}
-    .logo{font-weight:800;letter-spacing:.4px}
-    .logo span{color:var(--brand)}
-    .btn{display:inline-flex;align-items:center;gap:10px;border:1px solid #223049;background:#121826;padding:10px 14px;border-radius:10px}
-    .btn.primary{background:linear-gradient(135deg,var(--brand),#2aa89f);border-color:transparent;color:#072220;font-weight:700}
-    .hero{padding:36px 0 18px 0}
-    .hero h1{font-size:clamp(30px,6vw,48px);line-height:1.05;margin:0 0 12px}
-    .hero p{max-width:800px;color:#c9d5e6;font-size:18px;margin:0 0 18px}
-    .grid{display:grid;gap:18px}
-    @media(min-width:820px){.grid.cols-3{grid-template-columns:1fr 1fr 1fr}}
-    @media(min-width:820px){.grid.cols-2{grid-template-columns:1fr 1fr}}
-    .card{background:var(--card);border:1px solid #1a2334;padding:18px;border-radius:14px}
-    .card h3{margin:0 0 6px}
-    .pill{display:inline-block;padding:6px 10px;border:1px solid #2a3a57;border-radius:999px;color:#b8c5da;font-size:12px}
-    .kicker{color:var(--accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+    .container{max-width:1050px;margin:0 auto;padding:32px 20px}
+    .nav{display:flex;gap:14px;align-items:center;justify-content:space-between}
+    .brand{font-weight:800;letter-spacing:.2px}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));color:#fff;font-weight:600;font-size:12px}
+    .btn{display:inline-block;padding:12px 18px;border-radius:10px;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));color:#fff;font-weight:700;border:none;cursor:pointer;box-shadow:0 6px 18px var(--ring)}
+    .btn:hover{opacity:.95}
+    .btn.secondary{background:transparent;color:var(--accent-1);border:1.5px solid var(--accent-1);box-shadow:none}
+    header.hero{padding:56px 0 30px}
+    .hero h1{font-size:clamp(28px,5vw,44px);line-height:1.1;margin:10px 0}
+    .hero p{max-width:760px;color:var(--muted);margin:10px 0 24px}
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:860px){.grid{grid-template-columns:1fr}}
+    .card{border:1px solid rgba(127,127,127,.18);padding:18px;border-radius:14px;background:linear-gradient(180deg,rgba(31,182,255,.05),transparent 45%),rgba(255,255,255,.02)}
+    .card h3{margin:.2rem 0 .4rem}
     .muted{color:var(--muted)}
-    .section{padding:28px 0}
-    .list{display:grid;gap:10px}
-    .item{display:flex;gap:12px;align-items:flex-start}
-    .item b{color:#eef5ff}
-    .badge{background:#152238;border:1px solid #223049;color:#cfe7ff;border-radius:8px;padding:2px 8px;font-size:12px}
-    .callout{border-left:4px solid var(--brand);padding:12px 14px;background:#0f151f;border-radius:10px}
-    input,textarea,select{
-      width:100%;background:#0f1520;border:1px solid #273247;color:#e8eef7;border-radius:10px;
-      padding:12px 12px;font-size:15px;outline:0;box-shadow:0 0 0 0 var(--ring)
-    }
-    input:focus,textarea:focus,select:focus{box-shadow:0 0 0 6px var(--ring);border-color:#2b3c58}
-    form .row{display:grid;gap:12px}
-    @media(min-width:720px){form .row.two{grid-template-columns:1fr 1fr}}
-    footer{border-top:1px solid #182032;padding:22px 0;color:#9fb1c9}
-    .tiny{font-size:12px;color:#8ea0bb}
-    .slot{border:1px dashed #2a3a57;border-radius:12px;padding:14px;text-align:center;color:#9fb1c9}
+    .section{padding:34px 0}
+    .pill{display:inline-block;border:1px solid rgba(127,127,127,.25);border-radius:999px;padding:6px 10px;color:var(--muted);font-size:12px}
+    .footer{padding:28px 0 50px;border-top:1px solid rgba(127,127,127,.18);margin-top:36px}
+    .note{font-size:13px;color:var(--muted)}
   </style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <nav>
-      <div class="logo">Official <span>Sharon Crady™</span></div>
-      <div>
-        <a class="btn" href="/">← Back to Main Site</a>
-        <a class="btn primary" href="#join">Join the Community</a>
+  <div class="container">
+    <!-- Top nav -->
+    <div class="nav">
+      <div class="brand">
+        <span class="badge">Official Sharon Crady™</span>
       </div>
-    </nav>
+      <nav aria-label="Primary">
+        <!-- change these hrefs to the real paths on your site -->
+        <a href="/" class="pill">Home</a>
+        <a href="/about.html" class="pill">About</a>
+        <a href="/portfolio.html" class="pill">Portfolio</a>
+        <a href="/contact.html" class="pill">Contact</a>
+      </nav>
+    </div>
 
-    <div class="hero">
-      <div class="kicker">Studios & Network • Community Gateway</div>
-      <h1>A beginner-friendly VO & creative network where newcomers get real practice, real feedback, and real chances to get paid.</h1>
+    <!-- Hero -->
+    <header class="hero">
+      <p class="pill">Studios & Network — Community Beta</p>
+      <h1>Studios & Network</h1>
       <p>
-        We’re building a supportive on-ramp from “I’m curious” to “I’m bookable.” Expect weekly practice prompts,
-        portfolio showcases, micro-gigs, and an industry-kind culture. Start with voice-only if you like—grow at your pace.
+        An inclusive, beginner-friendly hub where voice talent, UGC creators, and producers
+        connect, learn, and collaborate. We’re building a supportive on-ramp for newcomers and a
+        professional lane for working artists—without the gatekeeping.
       </p>
-      <a class="btn primary" href="#open-calls">See Open Calls</a>
-    </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <!-- TODO: replace the Google Form link -->
+        <a class="btn" href="https://forms.gle/REPLACE_WITH_YOUR_GOOGLE_FORM" target="_blank" rel="noopener">Request Early Access</a>
+        <a class="btn secondary" href="#how-it-works">How it works</a>
+      </div>
+    </header>
+
+    <!-- Value pillars -->
+    <section class="section" id="how-it-works">
+      <h2 style="margin:0 0 10px">What you’ll find here</h2>
+      <p class="muted" style="margin-top:0">Created by Sharon Crady to fill the gap between “brand-new” and “booked and busy.”</p>
+
+      <div class="grid" style="margin-top:12px">
+        <article class="card">
+          <h3>Guided On-Ramp</h3>
+          <p class="muted">Templates, micro-courses, and weekly prompts to help you create your first
+            demos, UGC samples, and service pages—fast.</p>
+        </article>
+        <article class="card">
+          <h3>Supportive Community</h3>
+          <p class="muted">Gentle, constructive feedback from peers and moderators—no ego, no gatekeeping, just progress.</p>
+        </article>
+        <article class="card">
+          <h3>Path to Paid Work</h3>
+          <p class="muted">A public-facing talent directory (opt-in) and “starter gigs” board focused on ethical, beginner-friendly bookings.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Early member charter -->
+    <section class="section" id="charter">
+      <h2 style="margin:0 0 10px">Early Member Charter</h2>
+      <ul class="muted" style="margin:8px 0 0; padding-left:18px">
+        <li>Be kind. Be specific. Celebrate wins and effort.</li>
+        <li>No AI-generated auditions passed off as your own voice.</li>
+        <li>Rates education first; race-to-the-bottom gigs are filtered out.</li>
+        <li>Diversity & accessibility are core values.</li>
+      </ul>
+      <div style="margin-top:16px">
+        <a class="btn" href="https://forms.gle/REPLACE_WITH_YOUR_GOOGLE_FORM" target="_blank" rel="noopener">Join the Beta List</a>
+      </div>
+      <p class="note" style="margin-top:10px">By joining the beta list, you’ll also get one practice script + one micro gig lead in your inbox each week.</p>
+    </section>
+
+    <!-- Cross-links to your ecosystem -->
+    <section class="section">
+      <h2 style="margin:0 0 10px">Explore the Ecosystem</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Official Sharon Crady™</h3>
+          <p class="muted">My main hub: portfolio, news, and brand offers.</p>
+          <p><a href="/" aria-label="Go to Official Sharon Crady main site">Visit main site →</a></p>
+        </article>
+        <article class="card">
+          <h3>Digital Shop</h3>
+          <p class="muted">Warm-ups, scripts, Canva templates, and branding kits for creators.</p>
+          <!-- TODO: point to your Etsy or on-site shop -->
+          <p><a href="https://www.etsy.com/shop/REPLACE_SHOP" target="_blank" rel="noopener">Visit shop →</a></p>
+        </article>
+        <article class="card">
+          <h3>Studios & Productions</h3>
+          <p class="muted">Original projects, casting notices, and collaboration calls.</p>
+          <!-- TODO: link to the relevant page/anchor when ready -->
+          <p><a href="/portfolio.html">See projects →</a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="muted">© <span id="y"></span> Official Sharon Crady™. All rights reserved.</div>
+      <div class="muted" style="margin-top:6px">
+        Questions? <a href="/contact.html">Contact Sharon</a>
+        <!-- TODO: add your socials -->
+        · <a href="https://instagram.com/REPLACE" target="_blank" rel="noopener">Instagram</a>
+        · <a href="https://www.youtube.com/@REPLACE" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </footer>
   </div>
-</header>
 
-<main class="wrap">
-  <!-- WHY -->
-  <section class="section">
-    <div class="grid cols-3">
-      <div class="card">
-        <h3>Why this exists</h3>
-        <p class="muted">Most platforms expect “experience first.” We flip it: learn, practice, publish—then pitch.</p>
-        <span class="pill">Beginner-Positive</span>
-      </div>
-      <div class="card">
-        <h3>What you get</h3>
-        <ul class="list muted">
-          <li>✅ Weekly practice prompts + feedback threads</li>
-          <li>✅ Portfolio mini-sites you can share</li>
-          <li>✅ Micro-gigs & collabs posted by the community</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>How to start</h3>
-        <p class="muted">No fees, no pressure. Post a 30–60s sample, pick a prompt, and introduce yourself.</p>
-        <span class="pill">Free to Join</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOUNDER PROFILES -->
-  <section class="section">
-    <h2>Founding Members</h2>
-    <div class="grid cols-2">
-      <div class="card">
-        <h3>Official Sharon Crady</h3>
-        <p class="muted">Voiceover • Writing • Studios & Productions • Community Builder</p>
-        <div class="callout tiny">Demo Reel: (coming soon) • Availability: Evenings/Weekends • Genres: Commercial, Narration, UGC Voice</div>
-      </div>
-      <div class="card">
-        <h3>Miranda Kade</h3>
-        <p class="muted">Creative persona exploring stylized VO, dramatic reads, and character work.</p>
-        <div class="callout tiny">Demo Reel: (coming soon) • Explorations: Character, Romance, Spiritual & Inspirational</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OPEN CALLS -->
-  <section id="open-calls" class="section">
-    <h2>Open Calls & Micro-Gigs</h2>
-    <div class="grid cols-2">
-      <div class="card">
-        <h3>Practice Prompt of the Week</h3>
-        <p class="muted">Read a 20-second friendly brand spot. Pace: upbeat, trustworthy; keep breaths light.</p>
-        <div class="tiny">Upload to your portfolio and share the link in the weekly thread.</div>
-      </div>
-      <div class="card">
-        <h3>Community Micro-Gig</h3>
-        <p class="muted">Record 3 alt takes of a 10-sec CTA. $15 via PayPal for the picked take. (Pilot program.)</p>
-        <span class="badge">Pilot</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- RESOURCES -->
-  <section class="section">
-    <h2>Starter Resources</h2>
-    <div class="grid cols-3">
-      <div class="card">
-        <h3>Beginner Kit</h3>
-        <ul class="list muted">
-          <li class="item"><b>Mic basics:</b> distance, gain staging, plosives</li>
-          <li class="item"><b>Room tone:</b> makeshift treatment beats pricey gear</li>
-          <li class="item"><b>Editing:</b> normalize, light EQ, gentle noise-reduction</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Portfolio Checklist</h3>
-        <ul class="list muted">
-          <li>Commercial :15 / :30</li>
-          <li>Narration :30</li>
-          <li>Optional: Character :20</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Opportunities (curated)</h3>
-        <ul class="list muted">
-          <li>Fiverr / Upwork (entry)</li>
-          <li>Voices.com / Voice123 (intermediate)</li>
-          <li>Bunny Studio / Voice Crafters (pro)</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- AFFILIATE / SPONSOR SLOTS -->
-  <section class="section">
-    <h2>Tools We Use</h2>
-    <div class="grid cols-3">
-      <div class="slot">Affiliate Slot A (Mic/Interface)</div>
-      <div class="slot">Affiliate Slot B (Acoustic treatment)</div>
-      <div class="slot">Affiliate Slot C (DAW / Plugin)</div>
-    </div>
-    <p class="tiny muted">Disclosure: some links may be affiliate links—no extra cost to you.</p>
-  </section>
-
-  <!-- JOIN -->
-  <section id="join" class="section">
-    <h2>Join the Community</h2>
-    <p class="muted">No pressure. Introduce yourself and drop a private link to your first sample if you want feedback.</p>
-    <!-- Easiest: mailto. Later you can swap to Netlify / Formspark without changing the UI. -->
-    <form action="mailto:officialsharoncrady@gmail.com" method="post" enctype="text/plain">
-      <div class="row two">
-        <div><label>Name<br><input name="name" required placeholder="Your name"></label></div>
-        <div><label>Email<br><input name="email" type="email" required placeholder="you@example.com"></label></div>
-      </div>
-      <div class="row two">
-        <div>
-          <label>Focus Area<br>
-            <select name="focus">
-              <option>Voiceover (commercial)</option>
-              <option>Voiceover (narration)</option>
-              <option>Character / Audiobook</option>
-              <option>UGC Voice-only</option>
-              <option>Other creative</option>
-            </select>
-          </label>
-        </div>
-        <div><label>Portfolio / Sample Link (optional)<br><input name="link" placeholder="https://..."></label></div>
-      </div>
-      <div class="row">
-        <label>Message<br><textarea name="message" rows="5" placeholder="Tell us where you’re starting and what you want to practice first."></textarea></label>
-      </div>
-      <div style="display:flex;gap:10px;align-items:center;margin-top:10px">
-        <button class="btn primary" type="submit">Request Invite</button>
-        <span class="tiny muted">We’ll reply with a private invite link and the weekly prompt.</span>
-      </div>
-    </form>
-  </section>
-
-  <!-- NEWSLETTER -->
-  <section class="section">
-    <h2>Weekly Prompt Newsletter</h2>
-    <p class="muted">Get one practice script + one micro-gig lead in your inbox each week.</p>
-    <form action="https://formsubmit.co/your@email.here" method="POST">
-      <input type="hidden" name="_subject" value="Studios & Network Newsletter Signup">
-      <div class="row two">
-        <div><label>Email<br><input type="email" name="email" required placeholder="you@example.com"></label></div>
-        <div><label>Name (optional)<br><input name="name" placeholder="Your name"></label></div>
-      </div>
-      <div style="margin-top:10px"><button class="btn" type="submit">Subscribe</button></div>
-      <p class="tiny muted">You can swap this to Mailchimp/Substack later in minutes.</p>
-    </form>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <div class="tiny">© <span id="y"></span> Official Sharon Crady™ • Studios & Network • All Rights Reserved.</div>
-  </div>
-</footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
