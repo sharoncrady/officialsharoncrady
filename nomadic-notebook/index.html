@@ -1,67 +1,88 @@
 <!doctype html>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Nomadic Notebook • Official Sharon Crady</title>
-<link rel="stylesheet" href="./styles.css" />
-<meta name="description" content="Stories, reflections, and travel notes from the road by Sharon Crady." />
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nomadic Notebook · Official Sharon Crady™</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    :root{
+      --bg:#0f1216;         /* soft charcoal */
+      --surface:#161a20;    /* card background */
+      --ink:#e9eef5;        /* main text */
+      --muted:#aab6c7;      /* secondary text */
+      --accent:#6ee7f3;     /* teal/ice glow */
+      --ring: rgba(110,231,243,.25);
+    }
+    body{ background:var(--bg); color:var(--ink); font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    .wrap{ max-width:860px; margin:48px auto 96px; padding:0 20px; }
+    .crumbs{ font-size:.9rem; color:var(--muted); margin-bottom:14px; }
+    .crumbs a{ color:var(--muted); text-decoration:none; }
+    h1{ font-size:clamp(32px,4vw,44px); letter-spacing:.2px; margin:.2rem 0 1rem; }
+    .lede{ color:var(--muted); max-width:62ch; }
+    .grid{ display:grid; gap:18px; margin:28px 0 8px;}
+    @media (min-width:720px){ .grid{ grid-template-columns:1fr 1fr; } }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:14px; padding:18px 18px 16px;
+      box-shadow:0 6px 30px rgba(0,0,0,.25);
+      transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .card:hover{ transform:translateY(-2px); border-color:var(--ring); box-shadow:0 10px 36px rgba(110,231,243,.08); }
+    .kicker{ color:var(--accent); font-weight:600; font-size:.85rem; letter-spacing:.2px; text-transform:uppercase; }
+    .title{ margin:.35rem 0 .5rem; font-weight:800; font-size:1.25rem; line-height:1.2; }
+    .title a{ color:var(--ink); text-decoration:none; }
+    .meta{ font-size:.85rem; color:var(--muted); margin:.25rem 0 .5rem; }
+    .excerpt{ color:var(--muted); line-height:1.55; }
+    .pill{ display:inline-block; font-size:.75rem; color:#0a1117; background:var(--accent);
+      padding:.22rem .55rem; border-radius:999px; margin-left:.5rem; font-weight:600; }
+    footer{ margin-top:36px; color:var(--muted); font-size:.9rem; }
+    .back{ display:inline-block; margin-top:8px; color:var(--accent); text-decoration:none; }
+  </style>
 </head>
 <body>
-<header class="site-header">
-<a class="brand" href="/">officialsharoncrady.com</a>
-<nav class="nav">
-<a href="/">Home</a>
-<a href="/about.html">About</a>
-<a class="active" href="/nomadic-notebook/">Nomadic Notebook</a>
-</nav>
-</header>
+  <main class="wrap" role="main">
+    <nav class="crumbs">
+      <a href="/">officialsharoncrady.com</a> ·
+      <a class="back" href="/">Home</a>
+    </nav>
 
+    <header>
+      <h1>Nomadic Notebook</h1>
+      <p class="lede">A curated collection of travel notes, gentle mantras, and life-on-the-road moments. Built like a calm, readable, dark-mode magazine—easy on the eyes, easy on the soul.</p>
+    </header>
 
-<main class="container">
-<h1>Nomadic Notebook</h1>
-<p class="lede">A curated collection of travel notes, gentle mantras, and life-on-the-road moments.</p>
+    <section class="grid" aria-label="Latest entries">
+      <article class="card">
+        <div class="kicker">Peace Practices <span class="pill">1–3 min</span></div>
+        <h2 class="title"><a href="#">Finding Quiet in Chaos</a></h2>
+        <div class="meta">Sep 30, 2025 • mini routine for loud houses</div>
+        <p class="excerpt">How I create a calm bubble when the house is loud upstairs—a simple, repeatable routine you can switch on anytime.</p>
+      </article>
 
+      <article class="card">
+        <div class="kicker">Road Notes <span class="pill">2 min</span></div>
+        <h2 class="title"><a href="#">Four Corners Journal</a></h2>
+        <div class="meta">Sep 29, 2025 • IL→IA→NE→CO→NM→AZ→CA</div>
+        <p class="excerpt">Stopping ahead of dark, chasing big-sky sunsets, and the little choices that keep travel tender rather than tense.</p>
+      </article>
 
-<section class="grid">
-<!-- CARD EXAMPLE 1 -->
-<article class="card">
-<a class="card-link" href="./posts/finding-quiet-in-chaos.html">
-<h2>Finding Quiet in Chaos</h2>
-<p class="card-excerpt">How I create a calm bubble when the house is loud upstairs — a mini routine I can switch on anytime.</p>
-<div class="meta"><span>3 min read</span> • <time datetime="2025-09-30">Sep 30, 2025</time></div>
-</a>
-</article>
+      <article class="card">
+        <div class="kicker">Mantra <span class="pill">1 min</span></div>
+        <h2 class="title"><a href="#">Protection & Release Mantra</a></h2>
+        <div class="meta">Sep 28, 2025 • body-felt safety</div>
+        <p class="excerpt">A one-minute mantra I read when old memories resurface and I want my body to feel safe again.</p>
+      </article>
 
+      <!-- Add more cards as you publish -->
+    </section>
 
-<!-- CARD EXAMPLE 2 -->
-<article class="card">
-<a class="card-link" href="./posts/four-corners-journal.html">
-<h2>Four Corners Journal</h2>
-<p class="card-excerpt">Notes from the road: IL→IA→NE→CO→NM→AZ→CA, stopping ahead of dark and chasing big-sky sunsets.</p>
-<div class="meta"><span>2 min read</span> • <time datetime="2025-09-29">Sep 29, 2025</time></div>
-</a>
-</article>
-
-
-<!-- CARD EXAMPLE 3 -->
-<article class="card">
-<a class="card-link" href="./posts/protection-release-mantra.html">
-<h2>Protection & Release Mantra</h2>
-<p class="card-excerpt">A one-minute mantra I read when old memories resurface and I want my body to feel safe again.</p>
-<div class="meta"><span>1 min read</span> • <time datetime="2025-09-28">Sep 28, 2025</time></div>
-</a>
-</article>
-</section>
-</main>
-
-
-<footer class="site-footer">
-  <p>© <span id="year"></span> Sharon Crady. All rights reserved.</p>
-</footer>
-
-
-<script>
-// Auto year
-document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+    <footer>
+      © 2025 Sharon Crady. All rights reserved. · <a class="back" href="/studios-network/">Studios & Network</a>
+    </footer>
+  </main>
 </body>
 </html>
