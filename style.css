@@ -252,3 +252,60 @@ a.btn.frequense-btn:hover {
 }
 
 
+<style>
+  body {
+    background-color: #0e0e11;
+    color: #e0e6ea;
+    font-family: "Segoe UI", Roboto, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  main {
+    max-width: 800px;
+    width: 90%;
+    padding: 3rem 1rem;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #b4e2e0;
+  }
+
+  h2 {
+    color: #90c5c3;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+  }
+
+  a {
+    color: #79c5ff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: #c2f4f2;
+    text-decoration: underline;
+  }
+
+  p {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #d8dee2;
+  }
+
+  footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #7a8389;
+  }
+</style>
+
