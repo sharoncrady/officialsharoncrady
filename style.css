@@ -309,3 +309,18 @@ a.btn.frequense-btn:hover {
   }
 </style>
 
+
+
+/* Hero banner */
+.hero {
+  max-width: min(900px, 92vw);  /* never wider than 900px or the viewport */
+  margin: 24px auto;            /* centers it */
+}
+
+.hero img {
+  display: block;       /* removes inline gap */
+  width: 100%;          /* scales to container width */
+  height: auto;         /* keeps correct aspect ratio */
+  border-radius: 10px;  /* optional: soft corners */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35); /* optional depth */
+}
