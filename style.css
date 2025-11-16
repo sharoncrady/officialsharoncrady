@@ -370,3 +370,64 @@ a.btn.frequense-btn:hover {
   font-size: 0.85rem;
   color: #bfc7d4;
 }
+
+
+/* Writing Studio */
+
+.writing-page {
+  max-width: 980px;
+  margin: 2rem auto 3rem;
+  padding: 0 1.5rem;
+}
+
+.page-hero {
+  background: #0b1120;
+  border-radius: 18px;
+  padding: 1.8rem 1.6rem;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  margin-bottom: 1.8rem;
+}
+
+.page-hero h1 {
+  margin: 0 0 0.75rem;
+  font-size: 1.9rem;
+}
+
+.page-hero p {
+  margin: 0;
+  color: #cbd5f5;
+  line-height: 1.7;
+}
+
+.writing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.3rem;
+}
+
+.writing-card {
+  background: #020617;
+  border-radius: 16px;
+  border: 1px solid rgba(30, 64, 175, 0.7);
+  padding: 1.3rem 1.2rem 1.4rem;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+}
+
+.writing-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.55rem;
+  font-size: 1.1rem;
+}
+
+.writing-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #e5e7eb;
+}
+
+@media (max-width: 768px) {
+  .writing-page {
+    padding: 0 1rem 2.5rem;
+  }
+}
