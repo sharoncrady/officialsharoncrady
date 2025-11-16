@@ -693,3 +693,77 @@ body {
 .about-page .page-subtitle {
   color: #cbd5f5;  /* gentle light bluish-grey */
 }
+
+
+/* ===== Portfolio Page ===== */
+
+.portfolio-page {
+  padding: 3rem 0 4rem;
+}
+
+.portfolio-page .page-hero {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.portfolio-page .page-hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-page .page-hero .page-subtitle {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 0.98rem;
+  color: #bfc7d4;
+}
+
+/* Card grid layout */
+.portfolio-page .card-grid {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Individual cards */
+.portfolio-page .card {
+  background: #151b23;
+  border-radius: 12px;
+  padding: 1.4rem 1.6rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  flex: 1 1 260px;
+  max-width: 280px;
+}
+
+.portfolio-page .card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  color: #eaf4ff;
+}
+
+.portfolio-page .card p {
+  font-size: 0.95rem;
+  color: #d0d7e3;
+  margin-bottom: 0.9rem;
+}
+
+/* Card link button */
+.portfolio-page .card a {
+  display: inline-block;
+  font-size: 0.9rem;
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #0fe2ff;
+  color: #0fe2ff;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.portfolio-page .card a:hover {
+  background: #0fe2ff;
+  color: #031017;
+  transform: translateY(-1px);
+}
