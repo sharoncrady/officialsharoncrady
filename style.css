@@ -511,3 +511,59 @@ a.btn.frequense-btn:hover {
   }
 }
 
+/* ---------- About Page Layout ---------- */
+
+.page {
+  max-width: 900px;
+  margin: 2.5rem auto 3.5rem;
+  padding: 0 1.5rem;
+}
+
+/* Only style the About page's main card */
+.about-page .page-card {
+  background: rgba(15, 23, 42, 0.9);      /* dark slate */
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  padding: 2rem 1.8rem;
+  color: #e2e8f0;
+  line-height: 1.7;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.7);
+}
+
+.about-page .page-card p {
+  margin-bottom: 1rem;
+}
+
+/* Header area on About page */
+.about-page .page-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.about-page .page-subtitle {
+  color: #cbd5f5;
+  font-size: 0.98rem;
+  margin-top: 0.75rem;
+}
+
+/* Photo styling */
+.about-photo {
+  display: block;
+  max-width: 180px;
+  width: 60%;
+  margin: 1rem auto 0.5rem;
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.75);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .page {
+    margin: 1.8rem auto 2.5rem;
+    padding: 0 1rem;
+  }
+
+  .about-page .page-card {
+    padding: 1.6rem 1.2rem;
+  }
+}
