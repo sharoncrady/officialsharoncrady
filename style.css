@@ -589,3 +589,31 @@ a.btn.frequense-btn:hover {
 .writing-page {
     background: #ccd2d6;
 }
+
+
+/* Writing Studio — DARK MODE */
+.writing-page {
+    background: #0f1113;              /* deep charcoal, matches your other dark pages */
+    color: #e6e6e6;                   /* soft white text */
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Make sure all text inside cards stays readable */
+.writing-card { 
+    background: #1a1d20 !important;   /* dark card background */
+    color: #e6e6e6 !important;        /* text stays light */
+    border: 1px solid #2b2f33;        /* subtle border */
+}
+
+/* Card headings */
+.writing-card h3 {
+    color: #ffffff !important;
+}
+
+/* Main Writing Studio header box */
+.page-hero {
+    background: #1a1d20 !important;
+    color: #ffffff;
+    border: 1px solid #2b2f33;
+}
