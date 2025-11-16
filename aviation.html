@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aviation Journey – Official Sharon Crady™</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg: #0b0b10;
+      --bg-alt: #13131a;
+      --card: #181822;
+      --accent: #3aa7b5; /* turquoise */
+      --accent-soft: rgba(58, 167, 181, 0.15);
+      --text: #f7f7fb;
+      --muted: #c3c3d2;
+      --border: #2a2a38;
+      --link: #4fc3d7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #151522, #050509);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header.site-header {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(5,12,18,0.95));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .site-title {
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .site-title span {
+      color: var(--accent);
+    }
+
+    nav a {
+      margin-left: 1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    nav a.active {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 2rem auto 3rem;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 1.3fr);
+      gap: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .aviation-hero {
+      background: radial-gradient(circle at top left, var(--accent-soft), transparent),
+                  linear-gradient(to bottom right, #101018, #070710);
+      border-radius: 1rem;
+      padding: 1.75rem 1.75rem 1.5rem;
+      border: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+    }
+
+    .aviation-hero h1 {
+      margin-top: 0;
+      font-size: 1.7rem;
+      line-height: 1.3;
+    }
+
+    .aviation-hero p {
+      margin-bottom: 0.75rem;
+      color: var(--muted);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 0.75rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      color: var(--text);
+      font-size: 0.9rem;
+      text-decoration: none;
+      background: linear-gradient(to right, var(--accent), #1f8da0);
+    }
+    .btn:hover {
+      opacity: 0.92;
+      text-decoration: none;
+    }
+
+    .aviation-section {
+      background: var(--bg-alt);
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      padding: 1.4rem 1.6rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .aviation-section h2 {
+      margin-top: 0;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .aviation-section h3 {
+      margin-top: 1.1rem;
+      font-size: 1.05rem;
+      color: var(--accent);
+    }
+
+    .aviation-section ul {
+      padding-left: 1.2rem;
+      margin: 0.4rem 0 0.7rem;
+    }
+
+    .aviation-section li {
+      margin-bottom: 0.25rem;
+    }
+
+    .aviation-download {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .aviation-download a {
+      font-weight: 600;
+    }
+
+    /* Sidebar */
+    aside.sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .widget {
+      background: var(--bg-alt);
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      padding: 1.25rem 1.4rem;
+      font-size: 0.95rem;
+    }
+
+    .widget h3 {
+      margin-top: 0;
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .widget ul {
+      padding-left: 1.1rem;
+      margin: 0.25rem 0 0.6rem;
+    }
+
+    .widget li {
+      margin-bottom: 0.25rem;
+    }
+
+    code {
+      font-size: 0.9em;
+      background: #101018;
+      padding: 0.12rem 0.35rem;
+      border-radius: 4px;
+      border: 1px solid #222234;
+    }
+
+    small {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem 2.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      background: #050509;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Simple header/nav for GitHub Pages -->
+  <header class="site-header">
+    <div class="site-title">
+      OFFICIAL <span>SHARON CRADY™</span>
+    </div>
+    <nav>
+      <!-- Update these links to match your GitHub Pages structure -->
+      <a href="index.html">Home</a>
+      <a href="studios.html">Studios &amp; Network</a>
+      <a href="aviation.html" class="active">Aviation Journey</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- MAIN CONTENT COLUMN -->
+    <div>
+      <section id="aviation-journey" class="aviation-hero">
+        <h1>Aviation as My Legacy: From Solo Motherhood to Skybound Leadership</h1>
+        <p>
+          I’m <strong>Sharon Fitzgerald</strong>, a solo mom, creator, and future professional pilot. Aviation is not just a dream I picked up later in life — it’s the next chapter of my legacy. I’m building a path from Private Pilot to Instrument, Commercial, and eventually helicopter add-on, with a long-term vision of combining flight, storytelling, and service through <strong>Official Sharon Crady™ Aerial Media</strong>.
+        </p>
+        <p>
+          This page is where I share my aviation story, training plans, and ways you can support or collaborate with me as I move from the ground to the sky.
+        </p>
+        <a href="#aviation-timeline" class="btn">See My Training Plan</a>
+      </section>
+
+      <section class="aviation-section" id="aviation-why">
+        <h2>Why Aviation, and Why Now</h2>
+        <p>
+          For years, aviation lived in the background of my life as a quiet calling. I was raising my son, rebuilding after loss, and learning how to navigate life as a solo mother. Somewhere in the middle of all of that, my love for the sky kept resurfacing — in documentaries, in photos, in those moments when I would look up and feel a pull I couldn’t ignore anymore.
+        </p>
+        <p>
+          Aviation, for me, is about more than flying an airplane from Point A to Point B. It’s about building a life with more freedom, more purpose, and more capacity to serve. I want my son to see his mother pursue something big, disciplined, and meaningful — not in theory, but in real life.
+        </p>
+        <p>
+          My journey into aviation is unconventional. I’m entering this world later than some, with real financial constraints and real responsibilities. But I’m also entering it with maturity, resilience, and a very clear “why.” I’m not just training for myself. I’m training for the stories I’ll tell, the people I’ll encourage, and the doors I hope to open for other women and solo parents who think their window has closed. It hasn’t.
+        </p>
+      </section>
+
+      <section class="aviation-section" id="aviation-timeline">
+        <h2>Flight Training Plan &amp; Dual Timeline</h2>
+        <p>
+          My flight training plan is designed to be both ambitious and realistic. I’ve created two tracks: an
+          <strong>accelerated path</strong> if full funding arrives early, and a <strong>scholarship-paced path</strong> if funding comes in stages.
+          In both scenarios, I’m committed to safely and steadily progressing all the way through PPL, Instrument, Commercial,
+          and eventually a helicopter add-on.
+        </p>
+
+        <h3>Accelerated Path (Full Funding + Arizona Training)</h3>
+        <p>
+          If scholarship funds and/or private donor support come together up front, my goal is to relocate to Arizona and train full-time in 2026–2027.
+        </p>
+        <ul>
+          <li><strong>2026:</strong> Complete Private Pilot License (PPL) in approximately 2–4 months</li>
+          <li><strong>Late 2026–Spring 2027:</strong> Complete Instrument Rating (IR)</li>
+          <li><strong>2027:</strong> Complete Commercial Certificate after building required hours</li>
+          <li><strong>Late 2027 (as funding allows):</strong> Begin helicopter add-on training</li>
+        </ul>
+        <p>
+          Arizona’s consistent flying weather makes it possible to stay on an accelerated schedule without all the delays caused by winter and frequent cancellations.
+        </p>
+
+        <h3>Scholarship-Paced Path (Staggered Funding)</h3>
+        <p>
+          If funding arrives in stages through scholarship cycles, I will train in a more gradual but still focused way:
+        </p>
+        <ul>
+          <li><strong>2026:</strong> Complete PPL on a part-time or moderate schedule</li>
+          <li><strong>2027:</strong> Begin and complete Instrument Rating</li>
+          <li><strong>2028:</strong> Complete Commercial Certificate</li>
+          <li><strong>2029:</strong> Begin helicopter add-on when funding is available</li>
+        </ul>
+        <p>
+          No matter which timeline unfolds, my commitment is the same: to finish what I start, honor every dollar of grant or donor support, and keep moving forward.
+        </p>
+
+        <p class="aviation-download">
+          👉 Once I upload it, you’ll be able to view my full
+          <strong>Flight Training Plan &amp; Dual Timeline</strong> as a PDF here.<br>
+          <!-- Replace # with the actual URL to your PDF on GitHub when ready -->
+          <a href="#" target="_blank" rel="noopener">Download Training Plan (PDF)</a>
+        </p>
+      </section>
+
+      <section class="aviation-section" id="aviation-memberships">
+        <h2>Aviation Memberships &amp; Community Involvement</h2>
+        <p>
+          I believe in learning inside community, not alone. To support my training and stay connected, I’ve joined several aviation organizations:
+        </p>
+        <ul>
+          <li><strong>Women in Aviation International (WAI)</strong> – Member since 2025</li>
+          <li><strong>The Ninety-Nines, Inc.</strong> – Member since 2025</li>
+          <li><strong>Aircraft Owners and Pilots Association (AOPA)</strong> – Member since 2025</li>
+          <li><strong>Experimental Aircraft Association (EAA)</strong> – Member since 2025</li>
+        </ul>
+        <p>
+          These organizations provide mentorship, educational resources, and scholarship opportunities that make my training journey possible. As I move forward, I intend not only to receive support from these communities, but also to give back through speaking, storytelling, and mentorship for other late-entry student pilots.
+        </p>
+      </section>
+
+      <section class="aviation-section" id="aerial-media">
+        <h2>Official Sharon Crady™ Aerial Media</h2>
+        <p>
+          My long-term vision is to build <strong>Official Sharon Crady™ Aerial Media</strong> as a division of my broader creative brand. This will combine:
+        </p>
+        <ul>
+          <li>Flight training and cross-country journeys</li>
+          <li>Aerial photography and videography</li>
+          <li>Documentary-style storytelling</li>
+          <li>Behind-the-scenes looks at training, checkrides, and the emotional side of this journey</li>
+        </ul>
+        <p>
+          I want to highlight not just the “Instagrammable” side of aviation, but the real work behind the scenes — the study, the discipline, the setbacks, and the breakthroughs. I also intend to spotlight humanitarian aviation causes, flight schools, and other pilots whose stories deserve to be told.
+        </p>
+        <p>
+          My hope is that, through this work, a woman somewhere — or a solo parent who thought their chance had passed — sees my journey and says, <em>“If she can do it, maybe I can too.”</em>
+        </p>
+      </section>
+
+      <section class="aviation-section" id="aviation-documents-contact">
+        <h2>Aviation Documents &amp; Contact</h2>
+        <p>
+          As my journey continues, I will be sharing key documents and updates related to my aviation training:
+        </p>
+        <ul>
+          <li>Aviation Resume (PDF)</li>
+          <li>Flight Training Plan &amp; Dual Timeline (PDF)</li>
+          <li>Aviation Cover Letter (selected portions)</li>
+        </ul>
+        <p>
+          If you’d like to follow my aviation journey, collaborate on aviation or aerial media projects, or discuss sponsorship and support, you can reach me through my
+          <!-- Replace contact.html with your actual contact page -->
+          <a href="contact.html">contact page</a>.
+        </p>
+      </section>
+    </div>
+
+    <!-- SIDEBAR COLUMN -->
+    <aside class="sidebar">
+      <div class="widget">
+        <h3>Support My Aviation Journey</h3>
+        <p>
+          Every contribution helps me move forward in my pilot training — from flight hours and ground school to exams, gear, and future ratings.
+        </p>
+        <ul>
+          <li><strong>Zelle (Primary):</strong><br>📧 <code>sharoncrady@gmail.com</code></li>
+          <li><strong>Cash App:</strong><br><code>$scrady1</code></li>
+          <li><strong>Chase (Zelle-ready email):</strong><br>📧 <code>sharoncradyq17@gmail.com</code><br>
+            <small>Zelle not yet activated on this email, but it is connected to my Chase account.</small>
+          </li>
+        </ul>
+        <p>
+          More options coming soon: Venmo • PayPal • Sponsor Partnerships.
+        </p>
+        <p>
+          Your support — in any amount — becomes part of my aviation legacy.<br>
+          <strong>Thank you for helping me fly. ✈️</strong>
+        </p>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Official Sharon Crady™. All rights reserved.
+  </footer>
+
+  <script>
+    // simple current year for footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
