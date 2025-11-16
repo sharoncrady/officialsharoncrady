@@ -540,7 +540,7 @@ a.btn.frequense-btn:hover {
 }
 
 .about-page .page-subtitle {
-  color: #64748b;             /* darker, easier to read */
+  color: #4d5566;             /* darker, easier to read */
   font-size: 1rem;
   max-width: 640px;
   margin: 0.5rem auto 1.2rem; /* centered + better spacing */
@@ -548,12 +548,12 @@ a.btn.frequense-btn:hover {
 
 /* Photo styling */
 .about-photo {
-  display: block;
-  max-width: 160px;              /* just slightly smaller */
-  width: 55%;
-  margin: 0.75rem auto 0.25rem;  /* tighter to the heading/card */
-  border-radius: 999px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.75);
+    display: block;
+    max-width: 160px;
+    width: 55%;
+    margin: 0.25rem auto 0.4rem; /* tightened spacing */
+    border-radius: 999px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.75);
 }
 
 /* Mobile adjustments */
