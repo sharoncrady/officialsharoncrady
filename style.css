@@ -617,3 +617,56 @@ a.btn.frequense-btn:hover {
     color: #ffffff;
     border: 1px solid #2b2f33;
 }
+
+
+/* --- Writing Studio: FULL DARK MODE PAGE --- */
+
+body.writing-dark {
+  background: #05070b;      /* deep dark background like your aviation page */
+  color: #e6e6e6;           /* soft light text */
+}
+
+/* keep the header bar dark to match */
+body.writing-dark .site-header {
+  background: #05070b;
+}
+
+/* breadcrumb links (Home / Aviation Journey / Studios & Network / Writing Studio) */
+body.writing-dark header a {
+  color: #9fe8ff;
+}
+
+body.writing-dark header a:hover {
+  color: #ffffff;
+}
+
+/* main area */
+body.writing-dark .page-wrap.writing-page {
+  background: transparent;
+}
+
+/* hero banner at top of the Writing Studio */
+body.writing-dark .page-hero {
+  background: #11151b;
+  color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #2b2f33;
+}
+
+/* grid cards */
+body.writing-dark .writing-grid .writing-card {
+  background: #151920;
+  color: #e6e6e6;
+  border-radius: 12px;
+  border: 1px solid #2b2f33;
+}
+
+/* titles inside cards */
+body.writing-dark .writing-grid .writing-card h3 {
+  color: #ffffff;
+}
+
+/* smaller text inside cards */
+body.writing-dark .writing-grid .writing-card p {
+  color: #d8dde5;
+}
