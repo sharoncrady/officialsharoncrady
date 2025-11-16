@@ -534,24 +534,24 @@ a.btn.frequense-btn:hover {
   margin-bottom: 1rem;
 }
 
-/* Header area on About page */
 .about-page .page-header {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;     /* pulls the card a bit closer */
 }
 
 .about-page .page-subtitle {
-  color: #cbd5f5;
-  font-size: 0.98rem;
-  margin-top: 0.75rem;
+  color: #64748b;             /* darker, easier to read */
+  font-size: 1rem;
+  max-width: 640px;
+  margin: 0.5rem auto 1.2rem; /* centered + better spacing */
 }
 
 /* Photo styling */
 .about-photo {
   display: block;
-  max-width: 180px;
-  width: 60%;
-  margin: 1rem auto 0.5rem;
+  max-width: 160px;              /* just slightly smaller */
+  width: 55%;
+  margin: 0.75rem auto 0.25rem;  /* tighter to the heading/card */
   border-radius: 999px;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.75);
 }
