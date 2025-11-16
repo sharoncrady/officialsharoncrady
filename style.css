@@ -324,3 +324,40 @@ a.btn.frequense-btn:hover {
   border-radius: 12px;  /* optional: soft corners */
   box-shadow: 0 8px 28px rgba(0,0,0,0.35); /* optional depth */
 }
+
+
+<style>
+.support-list {
+  padding-left: 1.1rem;
+  margin: 0.4rem 0 0.8rem;
+}
+
+.support-list li {
+  margin-bottom: 0.35rem;
+}
+
+.qr-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.4rem;
+}
+
+.qr-item {
+  text-align: center;
+}
+
+.qr-img-sidebar {
+  width: 120px;
+  border-radius: 10px;
+  border: 1px solid #2a2a38;
+  background: #ffffff;
+  padding: 0.4rem;
+}
+
+.widget-footnote {
+  margin-top: 0.9rem;
+  font-size: 0.85rem;
+  color: #bfc7d4;
+}
+</style>
