@@ -569,3 +569,18 @@ a.btn.frequense-btn:hover {
 }
 
 
+/* Center header title and nav for all pages */
+.site-header {
+    text-align: center;
+}
+
+.site-header .site-title {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.site-header nav a {
+    margin: 0 0.5rem;
+    display: inline-block;
+}
