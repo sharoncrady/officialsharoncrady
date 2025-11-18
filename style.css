@@ -809,3 +809,16 @@ body {
     color: #9fd3ff;
     font-weight: bold;
 }
+
+
+.site-footer {
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.85rem;
+    color: #9fc2ff; /* soft light blue that works on dark backgrounds */
+    opacity: 0.8;
+}
+
+.site-footer p {
+    margin: 0;
+}
