@@ -945,3 +945,20 @@ body {
   cursor: not-allowed;
   pointer-events: none;
 }
+
+
+/* Center all store content */
+.store-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;           /* centers entire block */
+    padding: 0 20px;          /* adds breathing room */
+}
+
+/* Make sections centered nicely */
+.store-section {
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* centers product cards */
+    gap: 20px;                /* spacing between cards */
+}
