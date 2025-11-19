@@ -822,3 +822,8 @@ body {
 .site-footer p {
     margin: 0;
 }
+
+
+.btn-primary {
+    margin-bottom: 1.3rem;
+}
