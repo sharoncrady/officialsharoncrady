@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Writing Studio – Private Writing Desk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --bg: #020617;
+      --card: #020617;
+      --card-soft: #020617;
+      --outline: #22c55e33;
+      --accent: #22c55e;
+      --accent-soft: rgba(34,197,94,0.08);
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-subtle: rgba(148,163,184,0.4);
+      --danger: #f97373;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1rem;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1100px;
+      background: radial-gradient(circle at top left, #020617 0, #020617 55%, #020617 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: 18px;
+      padding: 2rem 2.25rem 1.75rem;
+      box-shadow:
+        0 18px 60px rgba(15,23,42,0.9),
+        0 0 0 1px rgba(15,23,42,1);
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1.75rem;
+      border-bottom: 1px solid rgba(148,163,184,0.25);
+      padding-bottom: 1.25rem;
+    }
+
+    .crumbs {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .panel {
+      background: radial-gradient(circle at top left, #020617 0, #020617 55%, #020617 100%);
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,0.35);
+      padding: 1.3rem 1.3rem 1.1rem;
+    }
+
+    .panel h2 {
+      margin: 0 0 0.75rem;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #e5e7eb;
+    }
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 0.35rem;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(148,163,184,0.45);
+      background: #020617;
+      color: var(--text-main);
+      padding: 0.55rem 0.7rem;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border 0.15s ease, box-shadow 0.15s ease,
+        background 0.15s ease;
+    }
+
+    textarea {
+      min-height: 260px;
+      resize: vertical;
+      font-family: inherit;
+      line-height: 1.5;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent-soft);
+      background: #020617;
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      align-items: flex-end;
+    }
+
+    .buttons-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.6rem;
+    }
+
+    button {
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.45);
+      background: #020617;
+      color: var(--text-main);
+      padding: 0.45rem 0.9rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: background 0.16s ease, border 0.16s ease, transform 0.05s;
+    }
+
+    button.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #020617;
+    }
+
+    button.primary:hover {
+      background: #16a34a;
+      border-color: #16a34a;
+    }
+
+    button.secondary:hover {
+      background: rgba(148,163,184,0.18);
+    }
+
+    button.danger {
+      border-color: rgba(239,68,68,0.6);
+      color: #fecaca;
+    }
+
+    button.danger:hover {
+      background: rgba(239,68,68,0.12);
+    }
+
+    button:active {
+      transform: translateY(1px);
+    }
+
+    .hint {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+    }
+
+    .draft-list {
+      margin-top: 0.4rem;
+      max-height: 380px;
+      overflow-y: auto;
+      padding-right: 0.2rem;
+    }
+
+    .draft-group-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin: 0.65rem 0 0.25rem;
+    }
+
+    .draft-item {
+      border-radius: 10px;
+      border: 1px solid rgba(148,163,184,0.4);
+      background: radial-gradient(circle at top left, #020617 0, #020617 55%, #020617 100%);
+      padding: 0.55rem 0.6rem;
+      margin-bottom: 0.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.85rem;
+    }
+
+    .draft-main {
+      flex: 1;
+      cursor: pointer;
+    }
+
+    .draft-title {
+      font-weight: 500;
+    }
+
+    .draft-meta {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .draft-actions {
+      display: flex;
+      gap: 0.35rem;
+    }
+
+    .status {
+      margin-top: 0.4rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .status strong {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .footer {
+      margin-top: 1.25rem;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    .footer a {
+      color: #9ca3af;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <div class="crumbs">
+        OFFICIAL SHARON CRADY™ &nbsp;·&nbsp; WRITING STUDIO
+      </div>
+      <h1>Private Writing Desk</h1>
+      <p>
+        Draft Warrior Mom pieces, fiction, and scripts here first.
+        Everything on this page is saved locally in your browser with
+        <strong>no one else seeing it</strong>.
+      </p>
+    </header>
+
+    <div class="layout">
+      <!-- LEFT: editor -->
+      <section class="panel">
+        <h2>Draft Editor</h2>
+
+        <div class="field-row">
+          <div>
+            <label for="draft-title">Title</label>
+            <input id="draft-title" type="text" placeholder="Working title…" />
+          </div>
+          <div>
+            <label for="draft-category">Category</label>
+            <select id="draft-category">
+              <option value="warrior">Warrior Mom Writing</option>
+              <option value="fiction">Fiction & Short Stories</option>
+              <option value="scripts">Scripts & Voice Pieces</option>
+              <option value="other">Other / Misc</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="draft-body">Your draft</label>
+        <textarea
+          id="draft-body"
+          placeholder="Start writing here. This will auto-save whenever you click Save Draft."
+        ></textarea>
+
+        <div class="buttons-row">
+          <button class="primary" id="btn-save">💾 Save Draft</button>
+          <button class="secondary" id="btn-new">＋ New Draft</button>
+          <button class="secondary" id="btn-duplicate">⧉ Duplicate</button>
+          <button class="danger" id="btn-delete-current">🗑 Delete Current</button>
+        </div>
+
+        <div class="hint">
+          Tip: this is your private sandbox. Draft here, then copy/paste
+          finished pieces into your public Writing Studio pages or Word docs
+          when they’re ready to publish.
+        </div>
+
+        <div class="status" id="status-line">
+          No draft loaded yet.
+        </div>
+      </section>
+
+      <!-- RIGHT: roadmap / list -->
+      <aside class="panel">
+        <h2>Draft Roadmap</h2>
+        <p class="hint">
+          Click a draft to load it into the editor. Everything below lives only
+          in your browser’s local storage.
+        </p>
+        <div id="draft-list" class="draft-list"></div>
+      </aside>
+    </div>
+
+    <div class="footer">
+      <a href="writing-studio.html">← Back to Writing Studio</a>
+      &nbsp;·&nbsp;
+      Designed & built by Sharon Fitzgerald
+    </div>
+  </div>
+
+  <script>
+    // ---------- storage helpers ----------
+    const STORAGE_KEY = "osc-writing-drafts-v1";
+
+    function loadDrafts() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        return raw ? JSON.parse(raw) : [];
+      } catch (e) {
+        console.error("Error reading drafts", e);
+        return [];
+      }
+    }
+
+    function saveDrafts(drafts) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(drafts));
+    }
+
+    function makeId() {
+      if (window.crypto && crypto.randomUUID) {
+        return crypto.randomUUID();
+      }
+      return "d_" + Date.now() + "_" + Math.random().toString(16).slice(2);
+    }
+
+    // ---------- state ----------
+    let drafts = loadDrafts();
+    let currentId = null;
+
+    const elTitle = document.getElementById("draft-title");
+    const elCategory = document.getElementById("draft-category");
+    const elBody = document.getElementById("draft-body");
+    const elList = document.getElementById("draft-list");
+    const elStatus = document.getElementById("status-line");
+
+    const btnSave = document.getElementById("btn-save");
+    const btnNew = document.getElementById("btn-new");
+    const btnDuplicate = document.getElementById("btn-duplicate");
+    const btnDeleteCurrent = document.getElementById("btn-delete-current");
+
+    // ---------- render ----------
+    function renderStatus(text, highlight = false) {
+      elStatus.innerHTML = highlight ? "<strong>" + text + "</strong>" : text;
+    }
+
+    function formatDate(ts) {
+      const d = new Date(ts);
+      return d.toLocaleDateString() + " · " + d.toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit"
+      });
+    }
+
+    function categoryLabel(code) {
+      switch (code) {
+        case "warrior":
+          return "Warrior Mom";
+        case "fiction":
+          return "Fiction / Short";
+        case "scripts":
+          return "Scripts / VO";
+        case "other":
+        default:
+          return "Other";
+      }
+    }
+
+    function renderList() {
+      if (!drafts.length) {
+        elList.innerHTML =
+          '<p class="hint">No drafts yet. Start something on the left and click <strong>Save Draft</strong>.</p>';
+        return;
+      }
+
+      // group by category
+      const groups = {};
+      drafts.forEach((d) => {
+        if (!groups[d.category]) groups[d.category] = [];
+        groups[d.category].push(d);
+      });
+
+      // sort each group by updated desc
+      Object.values(groups).forEach((arr) =>
+        arr.sort((a, b) => b.updatedAt - a.updatedAt)
+      );
+
+      let html = "";
+      ["warrior", "fiction", "scripts", "other"].forEach((cat) => {
+        const group = groups[cat];
+        if (!group || !group.length) return;
+
+        html +=
+          '<div class="draft-group"><div class="draft-group-title">' +
+          categoryLabel(cat) +
+          "</div>";
+
+        group.forEach((d) => {
+          html += `
+            <div class="draft-item" data-id="${d.id}">
+              <div class="draft-main">
+                <div class="draft-title">${d.title || "(Untitled draft)"}</div>
+                <div class="draft-meta">${formatDate(d.updatedAt)}</div>
+              </div>
+              <div class="draft-actions">
+                <button data-action="load" data-id="${d.id}" title="Load draft">Open</button>
+                <button class="danger" data-action="delete" data-id="${d.id}" title="Delete draft">✕</button>
+              </div>
+            </div>
+          `;
+        });
+
+        html += "</div>";
+      });
+
+      elList.innerHTML = html;
+    }
+
+    // ---------- load / save / delete ----------
+    function loadDraft(id) {
+      const d = drafts.find((x) => x.id === id);
+      if (!d) return;
+      currentId = id;
+      elTitle.value = d.title || "";
+      elCategory.value = d.category || "other";
+      elBody.value = d.body || "";
+      renderStatus("Loaded: " + (d.title || "(Untitled)"));
+    }
+
+    function saveCurrent() {
+      const title = elTitle.value.trim();
+      const category = elCategory.value;
+      const body = elBody.value;
+
+      if (!title && !body) {
+        renderStatus("Nothing to save yet.");
+        return;
+      }
+
+      let d;
+      const now = Date.now();
+
+      if (currentId) {
+        d = drafts.find((x) => x.id === currentId);
+        if (d) {
+          d.title = title || "(Untitled draft)";
+          d.category = category;
+          d.body = body;
+          d.updatedAt = now;
+        }
+      }
+
+      if (!d) {
+        d = {
+          id: makeId(),
+          title: title || "(Untitled draft)",
+          category,
+          body,
+          createdAt: now,
+          updatedAt: now
+        };
+        drafts.push(d);
+        currentId = d.id;
+      }
+
+      saveDrafts(drafts);
+      renderList();
+      renderStatus("Draft saved.", true);
+    }
+
+    function newDraft() {
+      currentId = null;
+      elTitle.value = "";
+      elCategory.value = "warrior";
+      elBody.value = "";
+      renderStatus("New blank draft.");
+    }
+
+    function duplicateCurrent() {
+      if (!currentId) {
+        renderStatus("Open a draft first, then you can duplicate it.");
+        return;
+      }
+      const original = drafts.find((x) => x.id === currentId);
+      if (!original) return;
+      const now = Date.now();
+      const copy = {
+        ...original,
+        id: makeId(),
+        title: original.title + " (Copy)",
+        createdAt: now,
+        updatedAt: now
+      };
+      drafts.push(copy);
+      saveDrafts(drafts);
+      renderList();
+      loadDraft(copy.id);
+      renderStatus("Draft duplicated.", true);
+    }
+
+    function deleteCurrent() {
+      if (!currentId) {
+        renderStatus("No draft selected to delete.");
+        return;
+      }
+      if (!confirm("Delete this draft permanently?")) return;
+      drafts = drafts.filter((d) => d.id !== currentId);
+      saveDrafts(drafts);
+      renderList();
+      newDraft();
+      renderStatus("Draft deleted.", true);
+    }
+
+    function deleteById(id) {
+      const d = drafts.find((x) => x.id === id);
+      if (!d) return;
+      if (!confirm('Delete "' + (d.title || "(Untitled)") + '"?')) return;
+      drafts = drafts.filter((x) => x.id !== id);
+      saveDrafts(drafts);
+      renderList();
+      if (currentId === id) {
+        newDraft();
+      }
+      renderStatus("Draft deleted.", true);
+    }
+
+    // ---------- events ----------
+    btnSave.addEventListener("click", saveCurrent);
+    btnNew.addEventListener("click", newDraft);
+    btnDuplicate.addEventListener("click", duplicateCurrent);
+    btnDeleteCurrent.addEventListener("click", deleteCurrent);
+
+    elList.addEventListener("click", (e) => {
+      const btn = e.target.closest("button");
+      const item = e.target.closest(".draft-item");
+      if (!btn && !item) return;
+
+      const action = btn ? btn.dataset.action : "load";
+      const id = btn ? btn.dataset.id : item.dataset.id;
+
+      if (action === "load") {
+        loadDraft(id);
+      } else if (action === "delete") {
+        deleteById(id);
+      }
+    });
+
+    // initial render
+    renderList();
+  </script>
+</body>
+</html>
