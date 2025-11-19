@@ -977,3 +977,36 @@ body {
   text-align: center;
   margin-bottom: 1.5rem;
 }
+
+
+/* --- FORCE-CENTER THE STORE LAYOUT --- */
+
+.store-page {
+  max-width: 1120px;
+  margin: 4rem auto 0;      /* centers the whole page content */
+  padding: 0 1.5rem 4rem;
+}
+
+/* Each section (Warrior Mom…, Voice & Audio…, Systems…) */
+.store-section {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* centers the section content */
+}
+
+/* Section headings */
+.store-section h2 {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+/* The grid that holds the cards */
+.store-section > .store-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 900px;         /* narrower band so it feels centered */
+  width: 100%;
+  margin: 0 auto;           /* centers the grid itself */
+}
