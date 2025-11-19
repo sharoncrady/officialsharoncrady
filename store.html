@@ -4,16 +4,143 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Store – Official Sharon Crady™</title>
+
+  <!-- Your main site styles -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Store-specific layout fixes (you can move these into style.css later) -->
+  <style>
+    /* Wraps the whole page content so it stays centered */
+    .store-page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem;
+    }
+
+    .store-hero {
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+
+    .store-hero h1 {
+      margin-bottom: 0.75rem;
+    }
+
+    .store-hero p {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .store-section {
+      margin-bottom: 3rem;
+    }
+
+    .store-section h2 {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* This is the important part for centering the cards */
+    .store-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    /* Card styling – tuned for your existing dark theme + blue cards */
+    .store-card {
+      background: #10263a;
+      border-radius: 12px;
+      padding: 1.5rem 1.75rem;
+      max-width: 320px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(130, 192, 255, 0.18);
+    }
+
+    .store-card-type {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin-bottom: 0.4rem;
+    }
+
+    .store-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .store-card p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+    }
+
+    .store-card-format {
+      font-size: 0.75rem;
+      opacity: 0.85;
+      margin-bottom: 1rem;
+    }
+
+    .store-card-actions {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .store-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 0.45rem 1.2rem;
+      font-size: 0.8rem;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+      cursor: default;
+    }
+
+    .pill-soon {
+      opacity: 0.75;
+    }
+
+    .pill-primary {
+      background: #1e90ff;
+      color: #ffffff;
+      cursor: pointer;
+      border-color: rgba(0, 0, 0, 0);
+    }
+
+    .pill-primary:hover {
+      background: #4da3ff;
+    }
+
+    /* Keep footer text centered with the page width */
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1.5rem 1rem 3rem;
+      font-size: 0.8rem;
+      opacity: 0.85;
+    }
+  </style>
 </head>
+
 <body>
+  <!-- Site header / nav (matches your other pages) -->
   <header class="site-header">
     <div class="site-title">
       OFFICIAL <span>SHARON CRADY™</span>
     </div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="aviation.html">Aviation Journey</a>
+      <a href="aviation-journey.html">Aviation Journey</a>
       <a href="studios-network.html">Studios &amp; Network</a>
       <a href="writing-studio.html">Writing Studio</a>
       <a href="store.html" class="active">Store</a>
@@ -21,139 +148,122 @@
   </header>
 
   <main class="page-wrap store-page">
-    <!-- Store hero -->
-    <section class="page-hero store-hero">
+    <!-- Hero -->
+    <section class="store-hero">
       <h1>Store</h1>
-      <p class="page-subtitle">
-        Digital journals, audio packs, and creative tools from
-        Official Sharon Crady™ Publishing &amp; Studios.
-      </p>
-      <p class="store-note">
-        🛒 Everything here is digital and instantly downloadable once released.
-        Products below are placeholders while I build out my first collections.
+      <p>
+        Digital journals, audio packs, and creative tools from Official Sharon Crady™ Publishing &amp; Studios.
+        Everything here will be digital and instantly downloadable once released. Products below are placeholders
+        while I build out my first collections.
       </p>
     </section>
-    
-<main class="store-wrapper">
-    <!-- Section 1: Warrior Mom Journals -->
+
+    <!-- Warrior Mom Journals & Writing -->
     <section class="store-section">
-      <h2 class="store-section-title">Warrior Mom Journals &amp; Writing</h2>
+      <h2>Warrior Mom Journals &amp; Writing</h2>
       <div class="store-grid">
-        <article class="product-card">
-          <div class="product-tag">Digital Journal</div>
-          <h3 class="product-title">Mantras from the Heart of a Warrior Mom</h3>
-          <p class="product-text">
-            A guided digital journal of mantras, reflections, and prompts
-            for solo parents and field commanders in real life.
+
+        <article class="store-card">
+          <div class="store-card-type">Digital Journal</div>
+          <h3>Mantras from the Heart of a Warrior Mom</h3>
+          <p>
+            A guided digital journal of mantras, reflections, and prompts for solo parents and field commanders in real life.
           </p>
-          <p class="product-meta">Format: PDF • Personal use only</p>
-          <div class="product-footer">
-            <span class="badge-soon">Coming Soon</span>
-            <!-- later: replace # with real checkout link -->
-            <a href="#" class="product-btn disabled" aria-disabled="true">
-              Preview &amp; Purchase
-            </a>
+          <p class="store-card-format">Format: PDF · Personal use only</p>
+          <div class="store-card-actions">
+            <span class="store-pill pill-soon">Coming Soon</span>
+            <a href="#" class="store-pill pill-primary">Preview &amp; Purchase</a>
           </div>
         </article>
 
-        <article class="product-card">
-          <div class="product-tag">Digital Journal</div>
-          <h3 class="product-title">Field Commander Notebook</h3>
-          <p class="product-text">
-            Tactical-style planner for goals, finances, homeschooling, and
-            mission notes from the life of a Warrior Mom.
+        <article class="store-card">
+          <div class="store-card-type">Digital Journal</div>
+          <h3>Field Commander Notebook</h3>
+          <p>
+            Tactical-style planner for goals, finances, homeschooling, and mission notes from the life of a Warrior Mom.
           </p>
-          <p class="product-meta">Format: Fillable PDF • Personal use only</p>
-          <div class="product-footer">
-            <span class="badge-soon">Coming Soon</span>
-            <a href="#" class="product-btn disabled" aria-disabled="true">
-              Preview &amp; Purchase
-            </a>
+          <p class="store-card-format">Format: Fillable PDF · Personal use only</p>
+          <div class="store-card-actions">
+            <span class="store-pill pill-soon">Coming Soon</span>
+            <a href="#" class="store-pill pill-primary">Preview &amp; Purchase</a>
           </div>
         </article>
+
       </div>
     </section>
 
-    <!-- Section 2: Voice & Audio -->
+    <!-- Voice & Audio -->
     <section class="store-section">
-      <h2 class="store-section-title">Voice &amp; Audio</h2>
+      <h2>Voice &amp; Audio</h2>
       <div class="store-grid">
-        <article class="product-card">
-          <div class="product-tag">Audio Pack</div>
-          <h3 class="product-title">Warrior Mom Affirmations (Voice Pack)</h3>
-          <p class="product-text">
-            Short, uplifting affirmations recorded in my own voice for
-            mornings, pre-flight confidence, or late-night creative sessions.
+
+        <article class="store-card">
+          <div class="store-card-type">Audio Pack</div>
+          <h3>Warrior Mom Affirmations (Voice Pack)</h3>
+          <p>
+            Short, uplifting affirmations recorded in my own voice for mornings, pre-flight confidence, or late-night creative sessions.
           </p>
-          <p class="product-meta">Format: MP3 bundle • Personal use only</p>
-          <div class="product-footer">
-            <span class="badge-soon">Coming Soon</span>
-            <a href="#" class="product-btn disabled" aria-disabled="true">
-              Listen &amp; Purchase
-            </a>
+          <p class="store-card-format">Format: MP3 bundle · Personal use only</p>
+          <div class="store-card-actions">
+            <span class="store-pill pill-soon">Coming Soon</span>
+            <a href="#" class="store-pill pill-primary">Listen &amp; Purchase</a>
           </div>
         </article>
 
-        <article class="product-card">
-          <div class="product-tag">PDF Guide</div>
-          <h3 class="product-title">Starter Guide to Remote Voice Work</h3>
-          <p class="product-text">
-            A beginner-friendly guide to getting started with voiceover and
-            remote vocal work from home or on the road.
+        <article class="store-card">
+          <div class="store-card-type">PDF Guide</div>
+          <h3>Starter Guide to Remote Voice Work</h3>
+          <p>
+            A beginner-friendly guide to getting started with voiceover and remote voice work from home or on the road.
           </p>
-          <p class="product-meta">Format: PDF • Instant download</p>
-          <div class="product-footer">
-            <span class="badge-soon">Coming Soon</span>
-            <a href="#" class="product-btn disabled" aria-disabled="true">
-              Preview &amp; Purchase
-            </a>
+          <p class="store-card-format">Format: PDF · Instant download</p>
+          <div class="store-card-actions">
+            <span class="store-pill pill-soon">Coming Soon</span>
+            <a href="#" class="store-pill pill-primary">Preview &amp; Purchase</a>
+          </div>
         </article>
+
       </div>
     </section>
 
-    <!-- Section 3: Systems & Templates -->
+    <!-- Systems, Templates & Tools -->
     <section class="store-section">
-      <h2 class="store-section-title">Systems, Templates &amp; Tools</h2>
+      <h2>Systems, Templates &amp; Tools</h2>
       <div class="store-grid">
-        <article class="product-card">
-          <div class="product-tag">Template</div>
-          <h3 class="product-title">Official Sharon Crady™ Control Room Sheet</h3>
-          <p class="product-text">
-            A streamlined version of my Control Room planning system
-            to track projects, finances, and brand tasks.
+
+        <article class="store-card">
+          <div class="store-card-type">Template</div>
+          <h3>Official Sharon Crady™ Control Room Sheet</h3>
+          <p>
+            A streamlined version of my Control Room planning system to track projects, finances, and brand tasks.
           </p>
-          <p class="product-meta">Format: Excel / Google Sheets</p>
-          <div class="product-footer">
-            <span class="badge-soon">Coming Soon</span>
-            <a href="#" class="product-btn disabled" aria-disabled="true">
-              View Details
-            </a>
+          <p class="store-card-format">Format: Excel / Google Sheets</p>
+          <div class="store-card-actions">
+            <span class="store-pill pill-soon">Coming Soon</span>
+            <a href="#" class="store-pill pill-primary">View Details</a>
           </div>
         </article>
 
-        <article class="product-card">
-          <div class="product-tag">Developer Resource</div>
-          <h3 class="product-title">Beginner Web Dev Cheat Sheet</h3>
-          <p class="product-text">
-            A one-stop quick reference for HTML &amp; CSS basics, built from
-            my own learning journey and coding notes.
+        <article class="store-card">
+          <div class="store-card-type">Developer Resource</div>
+          <h3>Beginner Web Dev Cheat Sheet</h3>
+          <p>
+            A one-stop quick reference for HTML &amp; CSS basics, built from my own learning journey and coding notes.
           </p>
-          <p class="product-meta">Format: PDF • Instant download</p>
-          <div class="product-footer">
-            <span class="badge-soon">Coming Soon</span>
-            <a href="#" class="product-btn disabled" aria-disabled="true">
-              Preview &amp; Purchase
-            </a>
-          </main>
+          <p class="store-card-format">Format: PDF · Instant download</p>
+          <div class="store-card-actions">
+            <span class="store-pill pill-soon">Coming Soon</span>
+            <a href="#" class="store-pill pill-primary">Preview &amp; Purchase</a>
           </div>
         </article>
+
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>© 2025 Official Sharon Crady™. All rights reserved.</p>
-    <p class="built-by">Designed &amp; built by Sharon Fitzgerald</p>
+  <footer>
+    <div>© 2025 Official Sharon Crady™. All rights reserved.</div>
+    <div>Designed &amp; built by Sharon Fitzgerald</div>
   </footer>
 </body>
 </html>
