@@ -963,3 +963,17 @@ body {
     justify-content: center;  /* centers product cards */
     gap: 20px;                /* spacing between cards */
 }
+
+
+/* Center the entire Store page content */
+.store-page {
+  max-width: 1120px;
+  margin: 4rem auto 0;    /* auto left/right = centered */
+  padding: 0 1.5rem 4rem;
+}
+
+
+.store-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
