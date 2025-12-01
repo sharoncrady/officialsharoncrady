@@ -6,6 +6,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Play Button Visibility Fix -->
+  /* MAKE AUDIO BAR DARK + MAKE PLAY BUTTON HIGH-VISIBILITY */
+audio {
+  background-color: #0F0E1A;   /* dark background for the player */
+  border-radius: 12px;
+}
+
+/* Darker control bar (Chrome/Edge/Safari) */
+audio::-webkit-media-controls-panel {
+  background-color: #0F0E1A !important;
+  color: #fff;
+  border-radius: 12px;
+}
+
+/* Play button visibility (invert + brighten) */
+audio::-webkit-media-controls-play-button {
+  filter: invert(1) brightness(2.2);
+}
+
+/* Make timeline darker */
+audio::-webkit-media-controls-timeline {
+  background-color: #1a1927 !important;
+  border-radius: 12px;
+}
+
+/* Make the scrubber knob/brackets brighter so it stands out */
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: #eaeaff !important;
+}
+
+/* Make the progress bar visible */
+audio::-webkit-media-controls-timeline-container {
+  background-color: #1a1927 !important;
+}
   <style>
     audio::-webkit-media-controls-play-button,
     audio::-webkit-media-controls-start-playback-button {
