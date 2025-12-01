@@ -5,11 +5,9 @@
   <title>Official Sharon Crady – Voiceover Demos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Visible Play Button Fix -->
+  <!-- Play Button Visibility Fix -->
   <style>
-    audio::-webkit-media-controls-play-button {
-      filter: invert(1);
-    }
+    audio::-webkit-media-controls-play-button,
     audio::-webkit-media-controls-start-playback-button {
       filter: invert(1);
     }
@@ -24,10 +22,10 @@
       --accent-teal: #4fd1c5;
       --text-main: #f7f7ff;
       --text-soft: #c7c7dd;
-      --border-subtle: rgba(255,255,255,0.08);
+      --border-subtle: rgba(255, 255, 255, 0.08);
       --radius-xl: 18px;
       --radius-full: 999px;
-      --shadow-soft: 0 18px 35px rgba(0,0,0,0.45);
+      --shadow-soft: 0 18px 35px rgba(0, 0, 0, 0.45);
       --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, sans-serif;
     }
@@ -61,7 +59,7 @@
       padding: 4px 12px;
       border-radius: var(--radius-full);
       border: 1px solid var(--border-subtle);
-      background: rgba(0,0,0,0.35);
+      background: rgba(0, 0, 0, 0.35);
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.12em;
@@ -92,7 +90,7 @@
     .tag-pill {
       padding: 4px 12px;
       border-radius: var(--radius-full);
-      background: rgba(201,163,255,0.14);
+      background: rgba(201, 163, 255, 0.14);
       color: var(--accent-lavender);
       font-size: 11px;
       text-transform: uppercase;
@@ -131,19 +129,23 @@
     .demo-grid {
       margin-top: 16px;
       display: grid;
-      grid-template-columns: minmax(0,1fr);
+      grid-template-columns: minmax(0, 1fr);
       gap: 12px;
     }
 
     @media (min-width: 720px) {
       .demo-grid {
-        grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       }
     }
 
     .demo-card {
       border-radius: var(--radius-xl);
-      background: linear-gradient(135deg, rgba(19,18,35,0.96), rgba(10,9,22,0.96));
+      background: linear-gradient(
+        135deg,
+        rgba(19, 18, 35, 0.96),
+        rgba(10, 9, 22, 0.96)
+      );
       border: 1px solid var(--border-subtle);
       box-shadow: var(--shadow-soft);
       padding: 14px 14px 12px;
@@ -183,34 +185,11 @@
       margin-top: 6px;
     }
 
-    .studio-panel {
-      margin-top: 50px;
-      padding: 20px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, #1e1b33, #0a0916);
-      border: 1px solid rgba(201,163,255,0.2);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .studio-title {
-      margin: 0 0 8px;
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--accent-teal);
-    }
-
-    .studio-list {
-      margin: 0;
-      padding-left: 18px;
-      font-size: 14px;
-      color: var(--text-soft);
-    }
-
     .cta-panel {
       margin-top: 44px;
       border-radius: 22px;
       background: radial-gradient(circle at top left, #312256, #080712);
-      border: 1px solid rgba(201,163,255,0.3);
+      border: 1px solid rgba(201, 163, 255, 0.3);
       padding: 18px 18px 20px;
       box-shadow: var(--shadow-soft);
     }
@@ -227,67 +206,376 @@
       margin: 0 0 12px;
       max-width: 640px;
     }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-lavender), var(--accent-teal));
+      color: #05040a;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid rgba(201, 163, 255, 0.4);
+      color: var(--accent-lavender);
+    }
   </style>
 </head>
 
 <body>
   <main class="page">
 
-    <!-- ================= HERO ================= -->
+    <!-- HERO -->
     <header class="hero">
-      <div class="hero-kicker">Official Sharon Crady™ Studios &amp; Productions</div>
+      <div class="hero-kicker">
+        <span>Official Sharon Crady™ Studios &amp; Productions</span>
+      </div>
       <h1 class="hero-title">Voiceover Demos</h1>
       <p class="hero-subtitle">
-        Warm, grounded storytelling with a calm, steady presence. Below is a curated set of demos across commercial, narration, meditation, character, and corporate work.
+        Warm, grounded storytelling with a calm, steady presence. Below is a curated
+        set of demos across commercial, narration, meditation, character, and
+        corporate work – all recorded from my home studio.
       </p>
       <div class="hero-tags">
         <span class="tag-pill">Commercial</span>
         <span class="tag-pill">Narration</span>
-        <span class="tag-pill">Meditation</span>
-        <span class="tag-pill">Character</span>
-        <span class="tag-pill">Corporate</span>
+        <span class="tag-pill">Meditation &amp; Wellness</span>
+        <span class="tag-pill">Character Mom</span>
+        <span class="tag-pill">Corporate &amp; E-Learning</span>
       </div>
     </header>
 
-    <!-- ================= HOME STUDIO PANEL ================= -->
-    <section class="studio-panel">
-      <h2 class="studio-title">My Home Studio Setup</h2>
-      <ul class="studio-list">
-        <li>🎤 Rode NT1 (5th Generation) Studio Condenser Microphone</li>
-        <li>🎚️ Focusrite Scarlett 2i2 (4th Gen) Audio Interface</li>
-        <li>🎧 Closed-back Monitoring Headphones</li>
-        <li>📦 Portable Vocal Booth (Sound Blankets + Acoustic Panels)</li>
-        <li>🔊 Noise-floor optimized recording space</li>
-        <li>🎛️ Recording Software: Audacity / Reaper</li>
-      </ul>
+    <!-- ========== CATEGORY 01: COMMERCIAL ========== -->
+    <section class="section" id="commercial">
+      <div class="section-header">
+        <div class="section-kicker">Category 01</div>
+        <h2 class="section-title">Commercial &amp; Brand Spots</h2>
+        <p class="section-subtitle">
+          Soft, inviting commercial reads for wellness, lifestyle, and soulful brands.
+          These clips highlight my warm, trustworthy tone with a gentle sense of uplift.
+        </p>
+      </div>
+
+      <div class="demo-grid">
+
+        <!-- MAIN COMMERCIAL DEMO -->
+        <article class="demo-card">
+          <div class="demo-meta">
+            <div class="demo-title">Commercial Demo – Professional Services Reel</div>
+            <div class="demo-tag">Commercial • Signature Voice</div>
+          </div>
+          <audio controls>
+            <source src="/audio/services-commercial-demo.mp3" type="audio/mpeg">
+          </audio>
+          <p class="demo-desc">
+            A clean, warm, confident commercial read that highlights your grounded feminine tone,
+            emotional nuance, and brand-ready professional delivery.
+          </p>
+        </article>
+
+        <!-- Warm Wellness -->
+        <article class="demo-card">
+          <div class="demo-meta">
+            <div class="demo-title">Warm Wellness Brand – 15s</div>
+            <div class="demo-tag">Soft Commercial</div>
+          </div>
+          <p class="demo-desc">A gentle, intimate read for wellness and mindfulness brands.</p>
+          <audio controls>
+            <source src="/audio/commercial-warm-wellness-15s.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+
+        <!-- Tagline -->
+        <article class="demo-card">
+          <div class="demo-meta">
+            <div class="demo-title">Brand Identity Tagline</div>
+            <div class="demo-tag">Tagline</div>
+          </div>
+          <p class="demo-desc">A concise, memorable tagline read for intros and outros.</p>
+          <audio controls>
+            <source src="/audio/brand-identity-tagline.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+
+        <!-- Motivational Snippet -->
+        <article class="demo-card">
+          <div class="demo-meta">
+            <div class="demo-title">Motivational Snippet – 20s</div>
+            <div class="demo-tag">Promo / Spot</div>
+          </div>
+          <p class="demo-desc">Uplifting, motivational VO for promos, reels, and campaigns.</p>
+          <audio controls>
+            <source src="/audio/motivation-emotional-signature.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+
+        <!-- Lifestyle Commercial -->
+        <article class="demo-card">
+          <div class="demo-meta">
+            <div class="demo-title">Lifestyle Commercial – 15s</div>
+            <div class="demo-tag">Commercial</div>
+          </div>
+          <p class="demo-desc">A clean, conversational commercial read.</p>
+          <audio controls>
+            <source src="/audio/commercial-warm-conversational.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+
+      </div>
     </section>
 
-    <!-- ======================================================
-         CATEGORY SECTIONS
-    ====================================================== -->
+    <!-- ========== CATEGORY 02: NARRATION ========== -->
+    <section class="section" id="narration">
+      <div class="section-header">
+        <div class="section-kicker">Category 02</div>
+        <h2 class="section-title">Narration &amp; Storytelling</h2>
+        <p class="section-subtitle">
+          Emotional, grounded storytelling for documentaries, podcasts, audiobooks, and
+          long-form content.
+        </p>
+      </div>
 
-    <!-- Your full categories + audio players are placed here exactly as in your original. -->
+      <div class="demo-grid">
 
-    <!-- To save message length, I’ll only generate the missing or fixed parts when we finalize.  
-         But your final file WILL include every section exactly as before. -->
+        <article class="demo-card">
+          <div class="demo-meta">
+            <div class="demo-title">Website Intro – OfficialSharonCrady.com</div>
+            <div class="demo-tag">Site Intro</div>
+          </div>
+          <p class="demo-desc">A heartfelt welcome piece.</p>
+          <audio controls>
+            <source src="/audio/website-intro-narration.mp3" type="audio/mpeg">
+          </audio>
+        </article>
 
-    <!-- ================= CONTACT CTA ================= -->
+        <article class="demo-card">
+          <div class="demo-meta">
+            <div class="demo-title">About Page Intro</div>
+            <div class="demo-tag">Narration</div>
+          </div>
+          <p class="demo-desc">A warm personal introduction.</p>
+          <audio controls>
+            <source src="/audio/about-page-intro.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+
+        <article class="demo-card">
+          <div class="demo-meta">
+            <div class="demo-title">Emotional Storytelling – “Hope”</div>
+            <div class="demo-tag">Narrative</div>
+          </div>
+          <p class="demo-desc">A reflective, hopeful narrative.</p>
+          <audio controls>
+            <source src="/audio/narration-emotional-hope-30s.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+
+        <article class="demo-card">
+          <div class="demo-meta">
+            <div class="demo-title">Soft Narrative Piece</div>
+            <div class="demo-tag">Narration</div>
+          </div>
+          <p class="demo-desc">A gentle documentary-style narration.</p>
+          <audio controls>
+            <source src="/audio/narration-corporate-calm.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== CATEGORY 03: MEDITATION ========== -->
+    <section class="section" id="meditation">
+      <div class="section-header">
+        <div class="section-kicker">Category 03</div>
+        <h2 class="section-title">Meditation &amp; Wellness</h2>
+        <p class="section-subtitle">
+          Slow, soothing reads designed for sleep stories, guided meditations,
+          yoga, and nervous system calming.
+        </p>
+      </div>
+
+      <div class="demo-grid">
+
+        <article class="demo-card">
+          <div class="demo-meta">
+            <div class="demo-title">Nighttime Meditation – 25s</div>
+            <div class="demo-tag">Sleep / Calm</div>
+          </div>
+          <p class="demo-desc">A soothing piece to settle into rest.</p>
+          <audio controls>
+            <source src="/audio/meditation-nighttime-25s.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+
+        <article class="demo-card">
+          <div class="demo-meta">
+            <div class="demo-title">Wellness Meditation – Calm VO</div>
+            <div class="demo-tag">Guided Calm</div>
+          </div>
+          <p class="demo-desc">A gentle, supportive meditation voice.</p>
+          <audio controls>
+            <source src="/audio/wellness-meditation-calm.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+
+        <article class="demo-card">
+          <div class="demo-meta">
+            <div class="demo-title">Soft Empowerment – 20s</div>
+            <div class="demo-tag">Affirmation</div>
+          </div>
+          <p class="demo-desc">An empowering, compassionate piece.</p>
+          <audio controls>
+            <source src="/audio/commercial-soft-empowerment-20s.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+
+        <article class="demo-card">
+          <div class="demo-meta">
+            <div class="demo-title">Gentle Mindfulness Snippet</div>
+            <div class="demo-tag">Mindfulness</div>
+          </div>
+          <p class="demo-desc">A short, grounding moment.</p>
+          <audio controls>
+            <source src="/audio/wellness-empowerment-ad.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== CATEGORY 04: CHARACTER ========== -->
+    <section class="section" id="character">
+      <div class="section-header">
+        <div class="section-kicker">Category 04</div>
+        <h2 class="section-title">Character – Soft Mom &amp; Emotional Roles</h2>
+        <p class="section-subtitle">
+          Gentle, nurturing character reads for animation, apps, family brands, and storytelling.
+        </p>
+      </div>
+
+      <div class="demo-grid">
+
+        <article class="demo-card">
+          <div class="demo-meta">
+            <div class="demo-title">Soft Mom Reassurance – 15s</div>
+            <div class="demo-tag">Character Mom</div>
+          </div>
+          <p class="demo-desc">A tender, reassuring moment.</p>
+          <audio controls>
+            <source src="/audio/character-soft-mom-reassurance.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+
+        <article class="demo-card">
+          <div class="demo-meta">
+            <div class="demo-title">Character Mom Line</div>
+            <div class="demo-tag">Character</div>
+          </div>
+          <p class="demo-desc">A soft, emotionally rich “mom” character voice.</p>
+          <audio controls>
+            <source src="/audio/character-soft-mom-line.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+
+        <article class="demo-card">
+          <div class="demo-meta">
+            <div class="demo-title">Emotional Support Line</div>
+            <div class="demo-tag">Character</div>
+          </div>
+          <p class="demo-desc">A gentle, supportive emotional moment.</p>
+          <audio controls>
+            <source src="/audio/character-protective-mom.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+
+        <article class="demo-card">
+          <div class="demo-meta">
+            <div class="demo-title">Future Character Demo Slot</div>
+            <div class="demo-tag">Coming Soon</div>
+          </div>
+          <p class="demo-desc">Reserved for additional character expansion.</p>
+          <audio controls>
+            <source src="/audio/character-light-personality-read.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== CATEGORY 05: CORPORATE ========== -->
+    <section class="section" id="corporate">
+      <div class="section-header">
+        <div class="section-kicker">Category 05</div>
+        <h2 class="section-title">Corporate &amp; E-Learning</h2>
+        <p class="section-subtitle">
+          Calm, clear narration for training, onboarding, and professional learning content.
+        </p>
+      </div>
+
+      <div class="demo-grid">
+
+        <article class="demo-card">
+          <div class="demo-meta">
+            <div class="demo-title">Calm Authority – Instructional</div>
+            <div class="demo-tag">E-Learning</div>
+          </div>
+          <p class="demo-desc">A steady, clear instructional read.</p>
+          <audio controls>
+            <source src="/audio/corporate-calm-instructional-15s.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+
+        <article class="demo-card">
+          <div class="demo-meta">
+            <div class="demo-title">Professional Narration – Info</div>
+            <div class="demo-tag">Corporate</div>
+          </div>
+          <p class="demo-desc">A clean, professional narration.</p>
+          <audio controls>
+            <source src="/audio/narration-serious-documentary.mp3" type="audio/mpeg">
+          </audio>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
     <section class="cta-panel">
       <h2 class="cta-title">Booking &amp; Collaboration</h2>
       <p class="cta-text">
-        For inquiries, custom auditions, or collaboration requests, please contact me using the email below.
+        If you’d like to discuss a project, request a custom audition, or explore booking
+        me for your brand, podcast, audiobook, app, or training content, you can reach me
+        directly using the contact options below.
       </p>
-
       <div class="cta-actions">
-        <a class="btn-primary" href="mailto:booking@sharoncrady.com">
+        <a class="btn-primary" href="mailto:YOUR_EMAIL_HERE">
           Email for Voiceover Inquiries
         </a>
-        <a class="btn-ghost" href="/contact">Visit Contact Page</a>
+        <a class="btn-ghost" href="/contact">
+          Visit Contact Page
+        </a>
       </div>
     </section>
 
   </main>
 </body>
 </html>
-
- 
