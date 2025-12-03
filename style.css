@@ -1106,3 +1106,11 @@ body {
     gap: 20px !important;
     margin-top: 20px !important;
 }
+
+
+/* Center the whole CTA panel box */
+.cta-panel {
+    max-width: 900px;      /* keeps it visually balanced */
+    margin: 0 auto !important;  /* centers the whole panel */
+    text-align: center;    /* ensures internal text stays centered */
+}
