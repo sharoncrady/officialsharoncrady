@@ -1125,3 +1125,20 @@ body {
 
 
 
+.back-home {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.back-home a {
+  color: #9feeff;
+  font-size: 1rem;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.back-home a:hover {
+  opacity: 1;
+}
