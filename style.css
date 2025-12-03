@@ -1101,7 +1101,7 @@ body {
     align-items: center;       /* horizontal centering */
     text-align: center;
     padding: 40px 20px;
-    min-height: 220px;         /* adjust if needed */
+    min-height: 260px;         /* adjust if needed */
 }
 
 /* Center the button row */
