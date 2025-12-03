@@ -1060,12 +1060,12 @@ body {
 
 .brand-tagline {
   font-size: 0.9rem;
-  color: #c9c9c9;
-  margin-top: -5px;
-  margin-bottom: 25px;
+  color: #cfcfcf;
   text-align: center;
   opacity: 0.85;
-  letter-spacing: 0.5px;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  letter-spacing: 0.4px;
 }
 
 
