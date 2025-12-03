@@ -1092,11 +1092,12 @@ body {
 
     text-align: center;
 
-    padding: 40px 20px;
-    min-height: 260px;         /* you can raise this if you want more vertical space */
+    padding: 20px 40px;
+    min-height: 220px;         /* you can raise this if you want more vertical space */
 
     max-width: 900px;
-    margin: 0 auto;            /* centers the box itself on the page */
+    margin: 40px auto 0 auto;
+    border-radius: 18px;       /* centers the box itself on the page */
 }
 
 /* Center the button row */
