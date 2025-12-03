@@ -1088,10 +1088,6 @@ body {
 }
 
 
-
-
-
-
 /* CTA wrapper creates the vertical centering */
 .cta-wrapper {
     display: flex;
@@ -1104,6 +1100,8 @@ body {
     padding: 40px 20px;
     margin: 40px auto;
     max-width: 1100px;
+    margin-top: 60px;
+    flex-direction: column;
 }
 
 /* CTA panel stays centered inside */
