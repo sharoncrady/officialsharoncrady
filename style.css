@@ -1112,3 +1112,31 @@ body {
     border-radius: 18px;
     text-align: center;
 }
+
+
+/* FINAL OVERRIDE FOR CTA ALIGNMENT */
+.cta-wrapper {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.cta-panel {
+    width: 100% !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.cta-actions {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
