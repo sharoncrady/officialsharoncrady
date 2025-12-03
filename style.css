@@ -1093,15 +1093,20 @@ body {
 
 
 
-/* Perfectly center ALL CTA panel content */
+/* Center entire CTA panel contents */
 .cta-panel {
     display: flex;
     flex-direction: column;
     justify-content: center;   /* vertical centering */
     align-items: center;       /* horizontal centering */
+
     text-align: center;
+
     padding: 40px 20px;
-    min-height: 260px;         /* adjust if needed */
+    min-height: 260px;         /* you can raise this if you want more vertical space */
+
+    max-width: 900px;
+    margin: 0 auto;            /* centers the box itself on the page */
 }
 
 /* Center the button row */
