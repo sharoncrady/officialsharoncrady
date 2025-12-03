@@ -1097,7 +1097,7 @@ body {
     display: flex;
     justify-content: center; /* vertical */
     align-items: center;     /* horizontal */
-    min-height: 260px;       /* controls purple box height */
+    min-height: 360px;       /* controls purple box height */
     width: 100%;
     background: linear-gradient(135deg, #2f1f4e, #1e1b3a);
     border-radius: 18px;
