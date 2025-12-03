@@ -1090,3 +1090,19 @@ body {
     gap: 20px;
     margin-top: 20px;
 }
+
+
+/* Force CTA panel centered */
+.cta-panel,
+.cta-panel * {
+    text-align: center !important;
+}
+
+/* Center button row */
+.cta-actions {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    margin-top: 20px !important;
+}
