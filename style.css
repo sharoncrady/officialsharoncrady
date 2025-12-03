@@ -1099,18 +1099,19 @@ body {
 
 /* CTA wrapper creates the vertical centering */
 .cta-wrapper {
-    display: flex;
-    justify-content: center; /* vertical */
-    align-items: center;     /* horizontal */
-    min-height: 360px;       /* controls purple box height */
-    width: 100%;
-    background: linear-gradient(135deg, #2f1f4e, #1e1b3a);
-    border-radius: 18px;
-    padding: 40px 20px;
-    margin: 40px auto;
-    max-width: 1100px;
-    margin-top: 60px;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 900px;     /* MATCHES your equipment card */
+  margin: 40px auto;
+  padding: 40px 20px;
+
+  background: linear-gradient(135deg, #2f1f4e, #1e1b3a);
+  border-radius: 18px;
+}
 }
 
 /* CTA panel stays centered inside */
