@@ -1092,25 +1092,22 @@ body {
 }
 
 
-/* Force CTA panel centered */
-.cta-panel,
-.cta-panel * {
-    text-align: center !important;
-}
 
-/* Center button row */
-.cta-actions {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 20px !important;
-    margin-top: 20px !important;
-}
-
-
-/* Center the whole CTA panel box */
+/* Perfectly center ALL CTA panel content */
 .cta-panel {
-    max-width: 900px;      /* keeps it visually balanced */
-    margin: 0 auto !important;  /* centers the whole panel */
-    text-align: center;    /* ensures internal text stays centered */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* vertical centering */
+    align-items: center;       /* horizontal centering */
+    text-align: center;
+    padding: 40px 20px;
+    min-height: 220px;         /* adjust if needed */
+}
+
+/* Center the button row */
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
