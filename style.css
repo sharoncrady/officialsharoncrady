@@ -1107,3 +1107,22 @@ body {
     gap: 20px;
     margin-top: 20px;
 }
+
+
+/* CTA wrapper creates the vertical centering */
+.cta-wrapper {
+    display: flex;
+    justify-content: center; /* vertical */
+    align-items: center;     /* horizontal */
+    min-height: 260px;       /* controls purple box height */
+    width: 100%;
+}
+
+/* CTA panel stays centered inside */
+.cta-panel {
+    width: 100%;
+    max-width: 900px;
+    padding: 30px 40px;
+    border-radius: 18px;
+    text-align: center;
+}
