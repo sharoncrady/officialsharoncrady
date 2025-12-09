@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audio Fiction – Official Sharon Crady™</title>
+  <link rel="icon" href="favicon.ico" />
+
+  <style>
+    :root {
+      --bg: #05070b;
+      --bg-elevated: #111624;
+      --bg-card: #151b2b;
+      --text-main: #f7f8ff;
+      --text-muted: #b8c1d9;
+      --accent: #37c2ff;      /* teal-blue */
+      --accent-soft: rgba(55, 194, 255, 0.13);
+      --border-subtle: #262c3d;
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.65);
+      --radius-card: 18px;
+    }
+
+    body.light-theme {
+      --bg: #f5f7fc;
+      --bg-elevated: #ffffff;
+      --bg-card: #ffffff;
+      --text-main: #10121a;
+      --text-muted: #5c647a;
+      --accent-soft: rgba(55, 194, 255, 0.08);
+      --border-subtle: #dde2f0;
+      --shadow-soft: 0 14px 30px rgba(5, 12, 40, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #10172e 0, #05060b 50%, #020309 100%);
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-wrap {
+      max-width: 1120px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 3rem;
+    }
+
+    /* ---------- NAV ---------- */
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 0.75rem 0 1.5rem;
+    }
+
+    .brand {
+      font-size: 0.9rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      background: transparent;
+      transition: 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--text-main);
+      border-color: var(--accent-soft);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    nav a.active {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      color: var(--text-main);
+      box-shadow: 0 0 0 1px rgba(55, 194, 255, 0.35);
+    }
+
+    /* theme toggle */
+
+    .theme-toggle {
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: rgba(8, 12, 24, 0.7);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.25rem 0.6rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.5);
+    }
+
+    .theme-toggle span {
+      font-size: 0.9rem;
+    }
+
+    .theme-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 2px rgba(5, 8, 20, 0.8);
+    }
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+      background: radial-gradient(circle at top left, #1a2340, #0a0c15);
+      padding: 1.75rem 1.5rem 1.75rem;
+      border-radius: 22px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(2, 6, 23, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-label-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(55, 194, 255, 0.3);
+    }
+
+    .hero h1 {
+      margin: 0 0 0.4rem;
+      font-size: 2.1rem;
+    }
+
+    .hero-sub {
+      margin: 0 0 0.8rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .hero-copy {
+      margin: 0;
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      max-width: 60ch;
+    }
+
+    /* ---------- LAYOUT ---------- */
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.6fr);
+      gap: 1.75rem;
+      margin-bottom: 2.25rem;
+    }
+
+    @media (max-width: 840px) {
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .section-heading {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-muted);
+      margin: 0 0 0.75rem;
+    }
+
+    .section-heading span {
+      color: var(--accent);
+    }
+
+    .section-sub {
+      margin: 0 0 1.1rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* ---------- STORY CARDS ---------- */
+
+    .story-card {
+      background: linear-gradient(135deg, var(--bg-card), #111827);
+      border-radius: var(--radius-card);
+      padding: 1.25rem 1.25rem 1.1rem;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .story-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at top, rgba(55, 194, 255, 0.12), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .story-card:hover::before {
+      opacity: 1;
+    }
+
+    .story-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(3, 7, 18, 0.8);
+      border: 1px solid rgba(248, 250, 252, 0.07);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .story-title {
+      margin: 0 0 0.4rem;
+      font-size: 1.1rem;
+    }
+
+    .story-meta {
+      margin: 0 0 0.7rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .story-desc {
+      margin: 0 0 0.9rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .story-meta span {
+      color: var(--accent);
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 0.15rem;
+      filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.7));
+    }
+
+    /* additional stories list */
+
+    .story-list {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+    <header>
+      <div class="brand">Official Sharon Crady™</div>
+
+      <nav>
+        <!-- Match these names/links to the rest of your OSC site -->
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="studios-network.html">Studios &amp; Network</a>
+        <a href="writing.html">Writing Studio</a>
+        <a href="voiceover.html">Voiceover</a>
+        <a href="audiofiction.html" class="active">Audio Fiction</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <button class="theme-toggle" id="themeToggle" type="button">
+        <div class="theme-dot"></div>
+        <span>Theme</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-label">
+          <span class="hero-label-dot"></span>
+          <span>Studios &amp; Productions</span>
+        </div>
+        <h1>Audio Fiction</h1>
+        <p class="hero-sub">Original short fiction, told in my own voice.</p>
+        <p class="hero-copy">
+          Warm, grounded storytelling with a cinematic touch. These pieces blend
+          character, emotion, and atmosphere into stories you can listen to anywhere—no
+          screen required. As I build out this library, you’ll find stand-alone shorts,
+          series pilots, and experimental narrative audio.
+        </p>
+      </section>
+
+      <!-- FEATURED STORY + SIDEBAR -->
+      <section class="grid">
+        <!-- Featured story -->
+        <div>
+          <h2 class="section-heading"><span>Featured</span> Story</h2>
+          <p class="section-sub">
+            A spotlight piece that shows the tone and emotional range I bring to narrative work.
+          </p>
+
+          <article class="story-card">
+            <div class="story-tag">Emotional • Contemporary</div>
+            <h3 class="story-title">Working Title – “Late Checkout”</h3>
+            <p class="story-meta">
+              Approx. 6–8 minutes · First-person narration · Soft drama with hopeful notes
+            </p>
+            <p class="story-desc">
+              A solo parent on the edge of burnout takes an unplanned detour at a roadside hotel,
+              where a quiet encounter and a late checkout become an unexpected turning point.
+              Gentle, grounded, and intimate—perfect for brands and producers looking for heartfelt,
+              real-world storytelling.
+            </p>
+
+            <!-- TODO: replace src with your real MP3 file path -->
+            <audio controls preload="none">
+              <source src="audio/audio-fiction-late-checkout.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </article>
+        </div>
+
+        <!-- Sidebar / notes -->
+        <aside>
+          <h2 class="section-heading">How I Work</h2>
+          <p class="section-sub">
+            Custom audio fiction, written and voiced for your project.
+          </p>
+
+          <article class="story-card">
+            <div class="story-tag">For Producers &amp; Creators</div>
+            <p class="story-desc">
+              I write and voice short fiction for:
+            </p>
+            <ul class="story-desc" style="padding-left: 1.1rem; margin-bottom: 0.9rem;">
+              <li>Podcast anthologies &amp; fiction feeds</li>
+              <li>Brand storytelling &amp; campaigns</li>
+              <li>Meditative, reflective, or wellness content</li>
+              <li>Character-driven shorts and pilots</li>
+            </ul>
+            <p class="story-desc">
+              If you’d like a custom piece in this style—or something built specifically for your
+              audience—you can reach out through my <span>Contact</span> page or mention
+              “Audio Fiction” in your message.
+            </p>
+          </article>
+        </aside>
+      </section>
+
+      <!-- ADDITIONAL STORIES -->
+      <section>
+        <h2 class="section-heading"><span>Short</span> Fiction Library</h2>
+        <p class="section-sub">
+          A growing collection of shorter pieces and experiments in tone, genre, and pacing.
+        </p>
+
+        <div class="story-list">
+
+          <article class="story-card">
+            <div class="story-tag">Quiet Slice of Life</div>
+            <h3 class="story-title">“Coffee After Midnight”</h3>
+            <p class="story-meta">
+              3–5 minutes · Soft introspective · Urban nightscape
+            </p>
+            <p class="story-desc">
+              A late-night café, one exhausted barista, and a regular who never quite says what
+              she’s really thinking. A gentle, cinematic moment about being seen on the nights
+              when you’d rather disappear.
+            </p>
+            <!-- swap this with your real file when ready -->
+            <audio controls preload="none">
+              <source src="audio/audio-fiction-coffee-after-midnight.mp3" type="audio/mpeg" />
+            </audio>
+          </article>
+
+          <article class="story-card">
+            <div class="story-tag">Soft Speculative</div>
+            <h3 class="story-title">“Signal at 3:17 A.M.”</h3>
+            <p class="story-meta">
+              4–6 minutes · Gentle suspense · Touch of sci-fi
+            </p>
+            <p class="story-desc">
+              Alone in a sleeping house, a woman keeps waking to the same faint sound: a distant
+              radio transmission that shouldn’t exist anymore. A quiet, low-key piece about messages,
+              timing, and learning to answer when life calls back.
+            </p>
+            <!-- swap this with your real file when ready -->
+            <audio controls preload="none">
+              <source src="audio/audio-fiction-signal-at-317.mp3" type="audio/mpeg" />
+            </audio>
+          </article>
+
+        </div>
+      </section>
+
+      <footer>
+        Audio fiction written &amp; performed by Official Sharon Crady™.
+        This page will continue to grow as new pieces are produced.
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // theme toggle with localStorage
+    const toggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    // on load – restore previous theme
+    const savedTheme = localStorage.getItem('osc-theme');
+    if (savedTheme === 'light') {
+      body.classList.add('light-theme');
+    }
+
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('light-theme');
+      const mode = body.classList.contains('light-theme') ? 'light' : 'dark';
+      localStorage.setItem('osc-theme', mode);
+    });
+  </script>
+</body>
+</html>
