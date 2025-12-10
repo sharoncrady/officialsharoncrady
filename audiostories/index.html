@@ -1,50 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Official Sharon Crady • Audio Stories</title>
 
-  <!-- Adjust this if your OSC stylesheet has a different name or path -->
-  <link rel="stylesheet" href="../style.css">
+  <!-- main OSC stylesheet -->
+  <link rel="stylesheet" href="../style.css" />
 </head>
 
-<body class="dark-mode">
+<body class="osc-audio-body">
 
-  <!-- SITE HEADER / NAV (reuse your existing header if you have one) -->
-  <header class="site-header">
-    <div class="site-header-inner">
-      <h1 class="site-title">Official Sharon Crady</h1>
-      <nav class="site-nav">
+  <!-- HEADER / NAV -->
+  <header class="osc-header">
+    <div class="osc-header-inner">
+      <div class="osc-logo-lockup">
+        <span class="osc-logo-text">Official Sharon Crady</span>
+        <span class="osc-logo-tagline">Voice • Story • Studio</span>
+      </div>
+
+      <nav class="osc-nav">
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../portfolio.html">Portfolio</a></li>
           <li><a href="../audiofiction.html">Audio Fiction</a></li>
           <li><a href="../store.html">Store</a></li>
-          <!-- Add or adjust other links as needed -->
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- CINEMATIC HERO SECTION -->
-  <section class="hero hero-audiostories">
-    <div class="hero-inner">
-      <p class="hero-kicker">Audio Series</p>
-      <h2 class="hero-title">Audio Stories</h2>
-      <p class="hero-subtitle">
-        Short, cinematic stories voiced in my own words and my own voice.  
-        Quiet moments, emotional turning points, and soft narrative slices of life.
+  <!-- HERO / INTRO -->
+  <section class="osc-hero-audio">
+    <div class="osc-hero-inner">
+      <p class="osc-hero-kicker">Audio Series</p>
+      <h1 class="osc-hero-title">Audio Stories</h1>
+      <p class="osc-hero-subtitle">
+        Short, cinematic stories voiced in my own words and my own voice—quiet scenes,
+        emotional turning points, and soft narrative slices of life.
       </p>
     </div>
   </section>
 
   <!-- MAIN CONTENT -->
-  <main class="page-main">
+  <main class="osc-main">
 
     <!-- ABOUT THIS SERIES -->
-    <section class="page-card">
+    <section class="osc-card">
       <h2>About This Series</h2>
       <p>
         <strong>Audio Stories</strong> is my ongoing collection of short narrative pieces:
@@ -52,88 +55,114 @@
         in audio form.
       </p>
       <p>
-        Episodes are designed to be easy to listen to in a single sitting—ideal for quiet evenings,
-        late-night reflection, or a few minutes of emotional storytelling between the noise of the day.
+        Each episode is designed to be easy to listen to in a single sitting—ideal for quiet
+        evenings, late-night reflection, or a few minutes of emotional storytelling between
+        the noise of the day.
       </p>
       <p>
-        Over time, this space will grow to include stand-alone short stories, mini-series arcs,
+        Over time, this space will grow to include stand-alone stories, mini-series arcs,
         and special themed collections.
       </p>
     </section>
 
-    <!-- EPISODE LIST (PLACEHOLDERS FOR NOW) -->
-    <section class="page-card">
-      <h2>Episodes</h2>
-      <p>These are placeholders for now. Once recordings are ready, each card will include a title, description, and audio player.</p>
+    <!-- EPISODES -->
+    <section class="osc-card">
+      <div class="osc-card-heading">
+        <h2>Episodes</h2>
+        <p class="osc-card-tagline">Coming soon • Recorded and released as they are ready.</p>
+      </div>
 
-      <div class="episodes-list">
+      <div class="osc-episodes">
 
-        <!-- EPISODE CARD 1 -->
-        <article class="episode-card">
-          <h3 class="episode-title">Episode 1 • Coming Soon</h3>
-          <p class="episode-meta">Short story • 3–6 minutes</p>
-          <p class="episode-desc">
-            The first official Audio Story. A soft, cinematic introduction to my storytelling voice.
+        <!-- EPISODE 1 -->
+        <article class="osc-episode">
+          <h3 class="osc-episode-title">Episode 1 • Coming Soon</h3>
+          <p class="osc-episode-meta">Short story • ~3–6 minutes</p>
+          <p class="osc-episode-desc">
+            A soft, cinematic introduction to my storytelling voice—grounded, emotional,
+            and intimate.
           </p>
-          <!-- Audio player placeholder; swap src when ready -->
-          <audio controls class="episode-player">
-            <source src="../audio/episode1-placeholder.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
+          <div class="osc-player-shell">
+            <audio controls class="osc-audio-player">
+              <source src="../audio/episode1-placeholder.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
         </article>
 
-        <!-- EPISODE CARD 2 -->
-        <article class="episode-card">
-          <h3 class="episode-title">Episode 2 • Coming Soon</h3>
-          <p class="episode-meta">Short story • 3–6 minutes</p>
-          <p class="episode-desc">
-            Another short story in audio form. Emotional, grounded, and written from real-life experience.
+        <!-- EPISODE 2 -->
+        <article class="osc-episode">
+          <h3 class="osc-episode-title">Episode 2 • Coming Soon</h3>
+          <p class="osc-episode-meta">Short story • ~3–6 minutes</p>
+          <p class="osc-episode-desc">
+            Another short story in audio form, drawn from real-life feeling and quiet
+            emotional honesty.
           </p>
-          <audio controls class="episode-player">
-            <source src="../audio/episode2-placeholder.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
+          <div class="osc-player-shell">
+            <audio controls class="osc-audio-player">
+              <source src="../audio/episode2-placeholder.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
         </article>
 
-        <!-- EPISODE CARD 3 -->
-        <article class="episode-card">
-          <h3 class="episode-title">Episode 3 • Coming Soon</h3>
-          <p class="episode-meta">Mini-series opener • 4–8 minutes</p>
-          <p class="episode-desc">
-            The beginning of a tiny audio series—three to five connected episodes sharing one story thread.
+        <!-- EPISODE 3 -->
+        <article class="osc-episode">
+          <h3 class="osc-episode-title">Episode 3 • Coming Soon</h3>
+          <p class="osc-episode-meta">Mini-series opener • ~4–8 minutes</p>
+          <p class="osc-episode-desc">
+            The beginning of a tiny connected story arc—three to five episodes sharing one
+            emotional thread.
           </p>
-          <audio controls class="episode-player">
-            <source src="../audio/episode3-placeholder.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
+          <div class="osc-player-shell">
+            <audio controls class="osc-audio-player">
+              <source src="../audio/episode3-placeholder.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
         </article>
 
       </div>
     </section>
 
-    <!-- CALL TO ACTION -->
-    <section class="page-card">
+    <!-- MINI-SERIES COMING SOON -->
+    <section class="osc-card osc-card-soft">
+      <h2>Mini-Series • Coming Soon</h2>
+      <p>
+        In addition to stand-alone stories, I’ll be introducing small audio mini-series:
+        three to five connected episodes exploring one setting, one relationship, or one
+        turning point in more depth.
+      </p>
+      <p class="osc-mini-hint">
+        Working title: <em>“Untitled Desert Motel Series (2026)”</em> — a quiet story about late-night
+        decisions, open roads, and starting over.
+      </p>
+    </section>
+
+    <!-- WHAT'S NEXT -->
+    <section class="osc-card">
       <h2>What’s Next</h2>
       <p>
-        I’ll be adding my first Audio Stories here soon. Once the first episode is live, this page will update
-        with titles, descriptions, and full audio players for you to listen to anytime.
+        Once Episode 1 is recorded and mixed, it will appear here with a full title, description,
+        and audio player you can return to anytime.
       </p>
       <p>
-        For now, you can explore my <a href="../audiofiction.html">Audio Fiction</a> and
-        <a href="../portfolio.html">Portfolio</a> to see where these stories begin.
+        Until then, you can explore my
+        <a href="../audiofiction.html">Audio Fiction</a> and
+        <a href="../portfolio.html">Portfolio</a> to see where these stories begin on the page
+        before they become audio.
       </p>
     </section>
 
   </main>
 
-  <!-- SIMPLE FOOTER -->
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Official Sharon Crady. All rights reserved.</p>
+  <!-- FOOTER -->
+  <footer class="osc-footer">
+    <p>© <span id="osc-year"></span> Official Sharon Crady. All rights reserved.</p>
   </footer>
 
   <script>
-    // Auto-update year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('osc-year').textContent = new Date().getFullYear();
   </script>
 
 </body>
