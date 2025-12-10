@@ -1142,3 +1142,27 @@ body {
 .back-home a:hover {
   opacity: 1;
 }
+
+
+/* AUDIO STORIES PAGE ---------------------------------------- */
+
+.audio-stories {
+    text-align: center;          /* centers all text */
+}
+
+.audio-stories h1,
+.audio-stories h2,
+.audio-stories h3 {
+    text-align: center;          /* ensures all headings are centered */
+}
+
+.audio-stories p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Center the audio players nicely */
+.audio-stories audio {
+    display: block;
+    margin: 10px auto 30px auto;
+}
