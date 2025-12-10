@@ -1161,3 +1161,18 @@ body {
     font-style: italic;
     margin-bottom: 15px;
 }
+
+
+/* FORCE ALL PAGE CONTENT TO CENTER PROPERLY */
+main {
+    max-width: 900px;
+    margin: 0 auto;   /* centers the whole page */
+    padding: 20px;
+}
+
+.page-card {
+    max-width: 900px;
+    margin: 0 auto 40px auto; /* centers each card */
+    padding: 20px;
+    text-align: left;  /* keep text left but block centered */
+}
