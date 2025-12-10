@@ -1144,40 +1144,9 @@ body {
 }
 
 
-/* AUDIO STORIES PAGE ---------------------------------------- */
-
-.audio-stories {
-    text-align: center;          /* centers all text */
-}
-
-.audio-stories h1,
-.audio-stories h2,
-.audio-stories h3 {
-    text-align: center;          /* ensures all headings are centered */
-}
-
-.audio-stories p {
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-/* Center the audio players nicely */
-.audio-stories audio {
-    display: block;
-    margin: 10px auto 30px auto;
-}
 
 
-/* FORCE CENTERING FOR AUDIO STORIES PAGE */
-.audiostories, 
-.audiostories * {
-    text-align: center !important;
-}
 
-.audiostories audio {
-    display: block !important;
-    margin: 15px auto !important;
-}
 
 
 /* AUDIO STORIES PAGE */
