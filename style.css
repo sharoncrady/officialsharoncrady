@@ -1298,3 +1298,148 @@ main {
 .floating-hire-btn:hover {
     background: #3bb03b;
 }
+
+
+/* ============================
+   AUDIO PLAYERS – OSC GREEN GLOW
+   Applied site-wide to all <audio> elements
+   ============================ */
+
+audio {
+  width: 100%;
+  max-width: 380px;
+  display: block;
+  margin: 0.5rem 0 1.25rem;
+  padding: 2px; /* room for the glow */
+  border-radius: 999px;
+  background-color: #050506;
+  box-shadow:
+    0 0 0 1px #7CFF6B,
+    0 0 22px rgba(124, 255, 107, 0.35);
+}
+
+/* WebKit browsers (Chrome, Edge, Safari) – style the control panel */
+audio::-webkit-media-controls-panel {
+  background: radial-gradient(circle at top left,
+    #181b1d 0%,
+    #050606 40%,
+    #020203 100%);
+  border-radius: 999px;
+}
+
+/* Play button accent */
+audio::-webkit-media-controls-play-button {
+  background-color: #7CFF6B;
+  border-radius: 50%;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+  background-color: #b0ff9a;
+}
+
+/* Time text colour */
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: #f5f5f5;
+}
+
+/* Progress bar */
+audio::-webkit-media-controls-timeline {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+}
+
+/* Firefox fallback – tighter control over border/背景 */
+@supports (-moz-appearance: none) {
+  audio {
+    background-color: #050506;
+    border: 1px solid #7CFF6B;
+    box-shadow:
+      0 0 18px rgba(124, 255, 107, 0.32);
+  }
+}
+
+/* ============================
+   CHARACTER DEMO PAGE POLISH
+   (Safe to use even if some classes already exist)
+   ============================ */
+
+/* Little “Listen” label above each player */
+.demo-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #a5ff9a;
+}
+
+.demo-label::before {
+  content: "🎧";
+}
+
+/* Demo cards – subtle green frame */
+.demo-section {
+  margin-top: 2.5rem;
+}
+
+.demo-card {
+  margin-bottom: 1.75rem;
+  padding: 1.5rem 1.75rem 1.75rem;
+  border-radius: 16px;
+  background: radial-gradient(circle at top, #14181a 0%, #050607 60%);
+  box-shadow:
+    0 0 0 1px rgba(124, 255, 107, 0.18),
+    0 18px 35px rgba(0, 0, 0, 0.55);
+}
+
+.demo-card h3 {
+  margin-bottom: 0.35rem;
+}
+
+.demo-card p {
+  margin-bottom: 0.35rem;
+}
+
+/* Tiny section-nav row you have under the main title */
+.section-nav {
+  text-align: center;
+  margin: 1.5rem auto 0.75rem;
+  font-size: 0.9rem;
+}
+
+.section-nav a {
+  color: #cfffbe;
+  text-decoration: none;
+  margin: 0 0.4rem;
+  padding: 0.15rem 0.35rem;
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.section-nav a:hover {
+  background: rgba(124, 255, 107, 0.1);
+  color: #ffffff;
+}
+
+/* “Hire Me” / “Contact Sharon” buttons on this page */
+.btn-character-cta {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #7CFF6B, #4ad54b);
+  color: #020303;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.55);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.btn-character-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.65);
+  filter: brightness(1.05);
+}
