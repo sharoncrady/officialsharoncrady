@@ -1208,21 +1208,21 @@ main {
 }
 
 
-/* QUICK JUMP MENU */
-.quick-jump-menu {
-    text-align: center;
-    margin-top: 10px;
-    padding-bottom: 20px;
-}
+/* Character Voice Acting – Sub-Navigation Link Colors */
 .quick-jump-menu a {
-    color: #8be58b;
-    margin: 0 12px;
-    font-weight: bold;
+    color: #4EA8FF; /* electric blue */
     text-decoration: none;
 }
+
 .quick-jump-menu a:hover {
-    color: #baffba;
+    color: #BBDDFF; /* lighter blue for hover */
 }
+
+
+.quick-jump-menu a:hover {
+    text-decoration: underline;
+}
+
 
 /* AVAILABILITY BANNER */
 .availability-banner {
