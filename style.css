@@ -1367,3 +1367,24 @@ audio.osc-blue-player::-webkit-media-controls-volume-slider {
 .site-nav .btn:active {
     transform: scale(0.97);
 }
+
+
+/* QUICK JUMP MENU — CENTERED + LARGER LINKS */
+.quick-jump-menu {
+    text-align: center;
+    margin: 25px auto;
+    padding: 10px 0;
+}
+
+.quick-jump-menu a {
+    color: #4db8ff; /* bright ocean blue */
+    font-size: 1.1rem; /* larger text */
+    margin: 0 18px; /* spacing between links */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.25s ease;
+}
+
+.quick-jump-menu a:hover {
+    color: #b3e0ff; /* lighter blue on hover */
+}
