@@ -1224,16 +1224,16 @@ main {
 }
 
 
-/* AVAILABILITY BANNER */
 .availability-banner {
-    background: #0b2f0b;
-    color: #d6ffd6;
+    background-color: #0B2A40;      /* deep cinematic blue */
+    color: #A7D8FF;                 /* soft glowing blue text */
+    padding: 0.6rem 0;
     text-align: center;
-    padding: 12px 0;
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-    border-bottom: 1px solid #1e6b1e;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #4EA8FF;  /* subtle light blue accent line */
 }
+
 
 /* LISTEN LABEL */
 .listen-label {
