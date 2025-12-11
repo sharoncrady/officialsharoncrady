@@ -1388,3 +1388,18 @@ audio.osc-blue-player::-webkit-media-controls-volume-slider {
 .quick-jump-menu a:hover {
     color: #b3e0ff; /* lighter blue on hover */
 }
+
+
+/* Accent Line Under Headings */
+.section-divider {
+    height: 2px;
+    background: linear-gradient(90deg, #00b7ff, #0077cc);
+    margin: 30px 0;
+    border-radius: 2px;
+}
+
+/* Brighter Headings */
+h2, h3 {
+    color: #cfe9ff; /* soft bright blue-white */
+    text-shadow: 0 0 8px rgba(0, 183, 255, 0.4);
+}
