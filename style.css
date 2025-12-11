@@ -1206,3 +1206,95 @@ main {
     font-style: italic;
     opacity: 0.9;
 }
+
+
+/* QUICK JUMP MENU */
+.quick-jump-menu {
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+.quick-jump-menu a {
+    color: #8be58b;
+    margin: 0 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.quick-jump-menu a:hover {
+    color: #baffba;
+}
+
+/* AVAILABILITY BANNER */
+.availability-banner {
+    background: #0b2f0b;
+    color: #d6ffd6;
+    text-align: center;
+    padding: 12px 0;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #1e6b1e;
+}
+
+/* LISTEN LABEL */
+.listen-label {
+    color: #b0ffb0;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+/* DOWNLOAD BOX */
+.demo-download-box {
+    margin-top: 10px;
+    border: 1px solid #2e8f2e;
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+}
+.coming-soon-label {
+    font-weight: bold;
+    color: #9cff9c;
+}
+
+/* FINAL CTA */
+.final-cta {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid #2f8f2f;
+    margin-top: 40px;
+}
+.final-cta h2 {
+    color: #baffba;
+}
+.final-cta p {
+    margin-top: 10px;
+}
+.cta-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #2e8f2e;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.cta-btn:hover {
+    background: #38a738;
+}
+
+/* FLOATING HIRE BUTTON */
+.floating-hire-btn {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background: #2e8f2e;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    z-index: 9999;
+}
+.floating-hire-btn:hover {
+    background: #3bb03b;
+}
