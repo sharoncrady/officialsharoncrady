@@ -1176,3 +1176,33 @@ main {
     padding: 20px;
     text-align: left;  /* keep text left but block centered */
 }
+
+
+.tagline {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.cinematic-divider {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #4CAF50, transparent);
+    margin: 40px 0;
+}
+
+.character-demo {
+    margin-bottom: 40px;
+}
+
+.character-demo h3 {
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-bottom: 10px;
+    font-style: italic;
+    opacity: 0.9;
+}
