@@ -1300,3 +1300,58 @@ main {
 }
 
 
+
+/* ----------------------------------------------
+   DEEP ELECTRIC BLUE AUDIO PLAYER THEME (OSC)
+   ---------------------------------------------- */
+
+
+
+.audio-player-blue audio {
+  width: 100%;
+  border-radius: 30px;
+  background: #0a0f1a; /* dark navy base */
+}
+
+/* Remove default styling */
+.audio-player-blue audio::-webkit-media-controls-panel {
+  background: linear-gradient(90deg, #0a0f1a, #0d1220);
+  border-radius: 30px;
+}
+
+/* TIME / PROGRESS BAR */
+.audio-player-blue audio::-webkit-media-controls-timeline {
+  background: rgba(30, 144, 255, 0.35); /* electric blue base */
+  border-radius: 30px;
+}
+
+.audio-player-blue audio::-webkit-media-controls-timeline:focus {
+  outline: none;
+}
+
+/* PROGRESS INDICATOR */
+.audio-player-blue audio::-webkit-media-controls-timeline::-webkit-media-slider-thumb {
+  background: #1e90ff;     /* deep electric blue */
+  border-radius: 50%;
+}
+
+/* PLAY BUTTON */
+.audio-player-blue audio::-webkit-media-controls-play-button {
+  background-color: #1e90ff; /* bright electric blue */
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.audio-player-blue audio::-webkit-media-controls-play-button:hover {
+  background-color: #4aa3ff; /* lighter electric blue glow */
+}
+
+/* VOLUME SLIDER */
+.audio-player-blue audio::-webkit-media-controls-volume-slider {
+  background: rgba(30, 144, 255, 0.35);
+  border-radius: 30px;
+}
+
+.audio-player-blue audio::-webkit-media-controls-volume-slider::-webkit-media-slider-thumb {
+  background: #1e90ff;
+}
