@@ -1403,3 +1403,14 @@ h2, h3 {
     color: #cfe9ff; /* soft bright blue-white */
     text-shadow: 0 0 8px rgba(0, 183, 255, 0.4);
 }
+
+
+.quick-jump-menu a {
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  color: #7cc7ff; /* softer blue */
+}
+
+.quick-jump-menu a:hover {
+  color: #b5e3ff; /* brighter on hover */
+}
