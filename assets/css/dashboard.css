@@ -1,0 +1,109 @@
+:root {
+  --bg: #0b1220;
+  --panel: rgba(255,255,255,0.035);
+  --border: rgba(255,255,255,0.12);
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #93c5fd;
+  --live: #22c55e;
+}
+
+* { box-sizing: border-box; }
+
+body.dark {
+  margin: 0;
+  background: radial-gradient(1200px 600px at 50% -10%, #111827 0%, var(--bg) 60%);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.dashboard-banner {
+  background: #0f172a;
+  color: var(--accent);
+  text-align: center;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.dashboard-header {
+  max-width: 1100px;
+  margin: 36px auto 10px;
+  padding: 0 18px;
+  text-align: center;
+}
+
+.dashboard-header h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.subtitle {
+  color: var(--muted);
+}
+
+.dashboard-grid {
+  max-width: 1100px;
+  margin: 28px auto;
+  padding: 0 18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.dashboard-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  min-height: 160px;
+}
+
+.dashboard-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.dashboard-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: #c7d2fe;
+  background: #1f2937;
+}
+
+.tag.live {
+  background: rgba(34,197,94,0.15);
+  color: #86efac;
+  border-color: rgba(34,197,94,0.35);
+}
+
+.dashboard-card.live {
+  outline: 1px solid rgba(34,197,94,0.35);
+}
+
+.dashboard-announcement {
+  max-width: 1100px;
+  margin: 20px auto 0;
+  padding: 18px;
+  background: rgba(147,197,253,0.08);
+  border: 1px solid rgba(147,197,253,0.25);
+  border-radius: 14px;
+}
+
+.dashboard-footer {
+  max-width: 1100px;
+  margin: 26px auto 50px;
+  padding: 0 18px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
