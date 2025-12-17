@@ -1414,3 +1414,44 @@ h2, h3 {
 .quick-jump-menu a:hover {
   color: #b5e3ff; /* brighter on hover */
 }
+
+
+
+
+.nav-group {
+  position: relative;
+}
+
+.nav-toggle {
+  cursor: pointer;
+}
+
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #1a1a1a;
+  border-radius: 8px;
+  padding: 8px;
+  min-width: 220px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+  z-index: 100;
+}
+
+.nav-dropdown a {
+  display: block;
+  padding: 8px 12px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-dropdown a:hover {
+  background: #2a2a2a;
+  border-radius: 6px;
+}
+
+.nav-group:hover .nav-dropdown {
+  display: block;
+}
