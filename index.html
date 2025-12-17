@@ -1,115 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Official Sharon Crady</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Official Sharon Crady</title>
 
-  <!-- Your external stylesheet (keep this if you have one) -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- Your external stylesheet (keep this if you have one) -->
+  <link rel="stylesheet" href="style.css" />
 
-  <!-- Page-specific styles & overrides -->
-  <style>
-    /* Base layout */
-    :root { --bg:#111; --panel:#1a1a1a; --text:#eee; --muted:#cfcfcf; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      text-align: center;
-    }
+  <!-- Page-specific styles & overrides -->
+  <style>
+    /* Base layout */
+    :root { --bg:#111; --panel:#1a1a1a; --text:#eee; --muted:#cfcfcf; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      text-align: center;
+    }
 
-    header {
-      background: var(--panel);
-      padding: 20px 16px 10px;
-      border-bottom: 1px solid #2a2a2a;
-    }
+    header {
+      background: var(--panel);
+      padding: 20px 16px 10px;
+      border-bottom: 1px solid #2a2a2a;
+    }
 
-    main { padding: 24px 16px; }
+    main { padding: 24px 16px; }
 
-    /* NAV */
-    .site-nav {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin: 8px 0 16px;
-    }
-    .btn {
-      display: inline-block;
-      background: #23a455;          /* default green */
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: background .2s, transform .1s, box-shadow .2s;
-    }
-    .btn:hover { background:#1d8a46; transform: translateY(-2px); }
+    /* NAV */
+    .site-nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 8px 0 16px;
+    }
+    .btn {
+      display: inline-block;
+      background: #23a455;          /* default green */
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: background .2s, transform .1s, box-shadow .2s;
+    }
+    .btn:hover { background:#1d8a46; transform: translateY(-2px); }
 
-    /* Current page highlight */
-    .site-nav .btn[aria-current="page"] {
-      outline: 2px solid #178a40;
-      box-shadow: 0 0 0 3px rgba(23,138,64,.25);
-    }
+    /* Current page highlight */
+    .site-nav .btn[aria-current="page"] {
+      outline: 2px solid #178a40;
+      box-shadow: 0 0 0 3px rgba(23,138,64,.25);
+    }
 
-    /* Headings & copy */
-    h1 { margin: 10px 0 6px; font-size: 36px; }
-    .welcome p { color: var(--muted); margin: 0 auto 12px; max-width: 780px; }
+    /* Headings & copy */
+    h1 { margin: 10px 0 6px; font-size: 36px; }
+    .welcome p { color: var(--muted); margin: 0 auto 12px; max-width: 780px; }
 
-    /* Explore section */
-    .links { margin: 12px 0 26px; }
-    .links p { color: var(--muted); margin: 8px 0 18px; }
-    .links .btn { margin: 8px 10px; }
+    /* Explore section */
+    .links { margin: 12px 0 26px; }
+    .links p { color: var(--muted); margin: 8px 0 18px; }
+    .links .btn { margin: 8px 10px; }
 
-    /* Color-coded shop buttons (override green) */
-    a.btn.etsy-btn {
-      background-color: #f1641e !important;  /* Etsy orange */
-      color: #fff !important;
-    }
-    a.btn.etsy-btn:hover { background-color: #d35410 !important; }
+    /* Color-coded shop buttons (override green) */
+    a.btn.etsy-btn {
+      background-color: #f1641e !important;  /* Etsy orange */
+      color: #fff !important;
+    }
+    a.btn.etsy-btn:hover { background-color: #d35410 !important; }
 
-    a.btn.frequense-btn {
-      background-color: #00a896 !important;  /* wellness teal */
-      color: #fff !important;
-    }
-    a.btn.frequense-btn:hover { background-color: #007f6f !important; }
+    a.btn.frequense-btn {
+      background-color: #00a896 !important;  /* wellness teal */
+      color: #fff !important;
+    }
+    a.btn.frequense-btn:hover { background-color: #007f6f !important; }
 
-    /* Banner image */
-    .banner {
-      max-width: 1536px;     /* adjust to taste */
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      display: block;
-      margin: 0 auto;
-      border-radius: 4px;
-    }
+    /* Banner image */
+    .banner {
+      max-width: 1536px;     /* adjust to taste */
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      border-radius: 4px;
+    }
 
-    /* Footer */
-    footer {
-      background: var(--panel);
-      border-top: 1px solid #2a2a2a;
-      padding: 18px 12px;
-      color: #bbb;
-    }
+    /* Footer */
+    footer {
+      background: var(--panel);
+      border-top: 1px solid #2a2a2a;
+      padding: 18px 12px;
+      color: #bbb;
+    }
 
-    /* Social links (optional icons placeholders) */
-    .social-links { margin-top: 8px; display: flex; gap: 12px; justify-content: center; }
-    .social-links a { color:#9ad1ff; text-decoration: none; }
-    .social-links a:hover { text-decoration: underline; }
+    /* Social links (optional icons placeholders) */
+    .social-links { margin-top: 8px; display: flex; gap: 12px; justify-content: center; }
+    .social-links a { color:#9ad1ff; text-decoration: none; }
+    .social-links a:hover { text-decoration: underline; }
 
-    @media (max-width: 520px) {
-      h1 { font-size: 30px; }
-    }
-  </style>
+    @media (max-width: 520px) {
+      h1 { font-size: 30px; }
+    }
+  </style>
 </head>
 <body>
 
-  <header>
-    <nav class="site-nav">
-      <a class="btn" href="index.html" aria-current="page">Home</a>
+  <header>
+   <nav class="site-nav">
+
+  <a class="btn" href="index.html" aria-current="page">Home</a>
   <a class="btn" href="about.html">About</a>
 
   <div class="nav-group">
@@ -142,78 +143,57 @@
   <a class="btn" href="writing-studio.html">Writing</a>
   <a class="btn" href="contact.html">Contact</a>
 
-<style>
-.btn-donate {
-  display: inline-block;
-  padding: 0.65rem 1.4rem;
-  background: linear-gradient(to right, #3aa7b5, #1f8da0);
-  border-radius: 999px;
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  border: 1px solid #3aa7b5;
-  box-shadow: 0 0 10px rgba(58, 167, 181, 0.3);
-  transition: 0.2s ease;
-}
-.btn-donate:hover {
-  opacity: 0.88;
-  text-decoration: none;
-}
-    </style>
+</nav>
 
+   
 
+    <h1>Official Sharon Crady</h1>
 
-      
+    <section class="welcome">
+      <h2>Welcome!</h2>
+      <p>This site is the home of my personal brand, projects, and creative updates.</p>
+    </section>
 
+    <section class="links">
+      <h2>Explore My Shops</h2>
+      <p>Find my <strong>digital printables</strong> on Etsy or explore <strong>wellness products</strong> with Frequense.</p>
 
-    <h1>Official Sharon Crady</h1>
-
-    <section class="welcome">
-      <h2>Welcome!</h2>
-      <p>This site is the home of my personal brand, projects, and creative updates.</p>
-    </section>
-
-    <section class="links">
-      <h2>Explore My Shops</h2>
-      <p>Find my <strong>digital printables</strong> on Etsy or explore <strong>wellness products</strong> with Frequense.</p>
-
-      <a class="btn etsy-btn" href="https://www.etsy.com/shop/SharonsPrintables" target="_blank" rel="noopener">Visit My Etsy Shop</a>
-      <a class="btn frequense-btn" href="https://frequense.com/sharoncrady" target="_blank" rel="noopener">Shop Frequense</a>
-    </section>
-    <!-- Keep your banner file name the same as your current asset -->
+      <a class="btn etsy-btn" href="https://www.etsy.com/shop/SharonsPrintables" target="_blank" rel="noopener">Visit My Etsy Shop</a>
+      <a class="btn frequense-btn" href="https://frequense.com/sharoncrady" target="_blank" rel="noopener">Shop Frequense</a>
+    </section>
+    <!-- Keep your banner file name the same as your current asset -->
 <section class="home-hero">
-  <div class="home-hero-inner">
-    <h1>Official Sharon Crady™</h1>
-    <p>
-      Building a multi-layered legacy in aviation, creativity, digital entrepreneurship,
-      and a nomadic future — one step at a time.
-    </p>
+  <div class="home-hero-inner">
+    <h1>Official Sharon Crady™</h1>
+    <p>
+      Building a multi-layered legacy in aviation, creativity, digital entrepreneurship,
+      and a nomadic future — one step at a time.
+    </p>
 
-    <div class="home-hero-buttons">
-      <a href="aviation.html" class="btn-primary">Aviation Journey</a>
-      <a href="writing-studio.html" class="btn-secondary">Writing Studio</a>
-    </div>
-  </div>
+    <div class="home-hero-buttons">
+      <a href="aviation.html" class="btn-primary">Aviation Journey</a>
+      <a href="writing-studio.html" class="btn-secondary">Writing Studio</a>
+    </div>
+  </div>
 </section>
-  </header>
-   
-  <main>
-   
-  
-     
-  </main>
+  </header>
+   
+  <main>
+   
+  
+     
+  </main>
 
-  <div id="footer-placeholder"></div>
+  <div id="footer-placeholder"></div>
 
 <script>
-  fetch('/includes/footer.html')
-    .then(r => r.text())
-    .then(html => {
-      document.getElementById('footer-placeholder').innerHTML = html;
-    });
+  fetch('/includes/footer.html')
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+    });
 </script>
- 
+ 
 </body>
 </html>
-
 
