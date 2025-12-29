@@ -1,132 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Interactive Audio Stories | Official Sharon Crady</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background-color: #0f0f14;
-      color: #eaeaf0;
       margin: 0;
-      padding: 2rem;
-      line-height: 1.6;
-    }
-
-    main {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    h1, h2 {
-      font-weight: 500;
-      letter-spacing: 0.02em;
+      padding: 40px 20px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0f0f14;
+      color: #eaeaf0;
+      text-align: center;
     }
 
     h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      margin-top: 3rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
     }
 
     p {
-      margin: 1rem 0;
-      color: #d4d4dc;
-    }
-
-    .instruction {
-      background: rgba(255,255,255,0.05);
-      border-left: 3px solid #7aa2f7;
-      padding: 1rem;
-      margin: 2rem 0;
-    }
-
-    audio {
-      width: 100%;
-      margin-top: 1rem;
+      max-width: 520px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+      color: #cfcfe8;
     }
 
     .choice {
-      margin-top: 2rem;
-      padding: 1rem;
-      background: rgba(255,255,255,0.03);
-      border-radius: 6px;
+      margin: 25px 0;
     }
 
-    .choice a {
-      display: inline-block;
-      margin-top: 0.5rem;
-      color: #7aa2f7;
-      text-decoration: none;
+    button {
+      background: transparent;
+      color: #eaeaf0;
+      border: 1px solid #666;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.2s ease;
     }
 
-    .choice a:hover {
-      text-decoration: underline;
+    button:hover {
+      border-color: #bfa6ff;
+      color: #bfa6ff;
     }
 
-    footer {
-      margin-top: 4rem;
-      font-size: 0.85rem;
-      color: #888;
+    audio {
+      margin-top: 15px;
+      width: 100%;
+      max-width: 420px;
     }
   </style>
 </head>
 
 <body>
-  <main>
 
-    <h1>Interactive Audio Stories</h1>
+  <h1>Interactive Audio Story</h1>
+  <p>
+    This is a guided listening experience.<br>
+    Begin where you are. Continue only if it feels right.
+  </p>
 
-    <p>
-      These are guided listening experiences.  
-      You don’t scroll. You don’t read much.  
-      You listen — and choose where the story goes next.
-    </p>
+  <!-- ARRIVAL -->
+  <div class="choice">
+    <button onclick="playAudio('arrival')">Begin</button>
+    <audio id="arrival" src="audio/arrival-calm-a-03-master.wav"></audio>
+  </div>
 
-    <div class="instruction">
-      <strong>How it works:</strong>
-      <ul>
-        <li>Listen to the audio scene.</li>
-        <li>When prompted, choose a path.</li>
-        <li>Follow the link that matches your choice.</li>
-        <li>Wear headphones if you can.</li>
-      </ul>
-    </div>
+  <!-- STAY -->
+  <div class="choice">
+    <button onclick="playAudio('stay')">Stay</button>
+    <audio id="stay" src="audio/stay-gentle-03-master.wav"></audio>
+  </div>
 
-    <h2>Scene One: Arrival</h2>
+  <!-- LEAVE -->
+  <div class="choice">
+    <button onclick="playAudio('leave')">Leave</button>
+    <audio id="leave" src="audio/leave-transition-03-master.wav"></audio>
+  </div>
 
-    <p>
-      Begin the story below.  
-      When the voice pauses, decide what you do next.
-    </p>
+  <script>
+    function playAudio(id) {
+      const audios = document.querySelectorAll('audio');
+      audios.forEach(a => {
+        a.pause();
+        a.currentTime = 0;
+      });
+      document.getElementById(id).play();
+    }
+  </script>
 
-    <!-- Placeholder audio -->
-    <audio controls>
-      <source src="audio/scene-01-intro.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-
-    <div class="choice">
-      <p><strong>When the voice asks:</strong></p>
-      <p>
-        “Do you stay… or do you leave?”
-      </p>
-
-      <a href="scene-01-stay.html">→ Stay</a><br>
-      <a href="scene-01-leave.html">→ Leave</a>
-    </div>
-
-    <footer>
-      © Official Sharon Crady.  
-      Interactive audio storytelling experiment.
-    </footer>
-
-  </main>
 </body>
 </html>
