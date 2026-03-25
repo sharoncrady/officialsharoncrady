@@ -1461,3 +1461,80 @@ h2, h3 {
   background: linear-gradient(180deg, #4fd1ff, #1aa3ff);
   box-shadow: 0 0 14px rgba(79, 209, 255, 0.8);
 }
+
+
+.studio-promo {
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.studio-promo-card {
+  max-width: 900px;
+  width: 100%;
+  padding: 40px 25px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(20,40,80,0.95), rgba(10,20,40,0.95));
+  border: 1px solid rgba(100, 200, 255, 0.3);
+  box-shadow: 0 0 25px rgba(50,150,255,0.15);
+  text-align: center;
+}
+
+.studio-badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  background: rgba(80,200,255,0.15);
+  border: 1px solid rgba(120,220,255,0.4);
+}
+
+.studio-promo-card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.studio-tagline {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #dceeff;
+}
+
+.studio-desc {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #bcdcff;
+}
+
+.studio-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.studio-btn {
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.studio-btn.primary {
+  background: linear-gradient(180deg, #4fd1ff, #1aa3ff);
+  color: white;
+  box-shadow: 0 0 12px rgba(79,209,255,0.6);
+}
+
+.studio-btn.secondary {
+  border: 1px solid rgba(120,200,255,0.4);
+  color: #e6f6ff;
+}
+
+.studio-btn:hover {
+  transform: translateY(-2px);
+}
