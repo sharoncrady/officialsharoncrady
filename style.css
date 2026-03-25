@@ -1670,3 +1670,22 @@ h2, h3 {
   background: linear-gradient(180deg, rgba(36, 71, 124, 0.98), rgba(16, 28, 56, 0.98));
   box-shadow: 0 0 32px rgba(53, 170, 255, 0.14);
 }
+
+
+.founding-box {
+  margin: 16px 0 18px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(60,140,255,0.18), rgba(20,60,120,0.25));
+  border: 1px solid rgba(120,200,255,0.4);
+  color: #e8f7ff;
+  font-size: 0.98rem;
+  box-shadow: 0 0 12px rgba(60, 170, 255, 0.25);
+}
+
+.founding-sub {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #cfeeff;
+}
