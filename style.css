@@ -1455,3 +1455,9 @@ h2, h3 {
 .nav-group:hover .nav-dropdown {
   display: block;
 }
+
+
+.btn.featured {
+  background: linear-gradient(180deg, #4fd1ff, #1aa3ff);
+  box-shadow: 0 0 14px rgba(79, 209, 255, 0.8);
+}
