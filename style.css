@@ -1689,3 +1689,15 @@ h2, h3 {
   font-size: 0.85rem;
   color: #cfeeff;
 }
+
+
+.studio-preview-link {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.studio-preview-link a {
+  color: #cfefff;
+  text-decoration: underline;
+  font-weight: 600;
+}
