@@ -49,7 +49,7 @@
       padding: 32px 18px 60px;
     }
 
-    .nav-wrap {
+    .site-nav {
       max-width: var(--max-width);
       margin: 0 auto 36px;
       display: flex;
@@ -58,7 +58,7 @@
       gap: 14px;
     }
 
-    .nav-btn {
+    .btn {
       display: inline-block;
       padding: 12px 20px;
       border-radius: 12px;
@@ -73,14 +73,14 @@
       min-width: 110px;
     }
 
-    .nav-btn:hover {
+    .btn:hover {
       transform: translateY(-2px);
       box-shadow:
         0 0 16px rgba(59, 198, 255, 0.75),
         inset 0 0 10px rgba(255, 255, 255, 0.25);
     }
 
-    .nav-btn.featured {
+    .btn.featured {
       background: linear-gradient(180deg, #4fd1ff, #1aa3ff);
       box-shadow:
         0 0 16px rgba(79, 209, 255, 0.8),
@@ -88,25 +88,9 @@
     }
 
     .hero {
-      max-width: 900px;
+      max-width: 920px;
       margin: 0 auto 34px;
       padding: 24px 18px 10px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.1rem, 4vw, 3.6rem);
-      margin: 0 0 14px;
-      color: #ffffff;
-      text-shadow: 0 0 10px rgba(255,255,255,0.32);
-    }
-
-    .hero p {
-      max-width: 760px;
-      margin: 0 auto 16px;
-      line-height: 1.75;
-      font-size: 1.08rem;
-      color: var(--text-soft);
-      text-shadow: 0 0 8px rgba(255,255,255,0.10);
     }
 
     .hero-tag {
@@ -121,6 +105,30 @@
       color: #dff7ff;
       border: 1px solid rgba(99, 220, 255, 0.35);
       box-shadow: var(--glow);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4vw, 3.8rem);
+      margin: 0 0 14px;
+      color: #ffffff;
+      text-shadow: 0 0 12px rgba(255,255,255,0.28);
+    }
+
+    .hero-sub {
+      max-width: 760px;
+      margin: 0 auto 14px;
+      line-height: 1.8;
+      font-size: 1.12rem;
+      color: var(--text-soft);
+      text-shadow: 0 0 8px rgba(255,255,255,0.10);
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 16px;
+      line-height: 1.8;
+      font-size: 1.04rem;
+      color: var(--text-soft);
     }
 
     .button-row {
@@ -188,6 +196,12 @@
       font-size: 1.03rem;
     }
 
+    .why-join .highlight {
+      color: #eef9ff;
+      font-style: italic;
+      font-size: 1.05rem;
+    }
+
     .benefits-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -218,18 +232,129 @@
       line-height: 1.7;
     }
 
-    .pricing-card {
-      max-width: 720px;
-      margin: 0 auto;
+    .preview-section {
+      max-width: 1100px;
+      margin: 0 auto 30px;
+    }
+
+    .preview-card {
+      background: linear-gradient(180deg, rgba(25, 48, 88, 0.96), rgba(13, 23, 44, 0.96));
+      border: 1px solid rgba(117, 202, 255, 0.28);
+      border-radius: 24px;
       padding: 34px 24px;
+      box-shadow: 0 0 28px rgba(36, 156, 255, 0.10);
+    }
+
+    .preview-kicker {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #e8fbff;
+      background: rgba(62, 207, 255, 0.14);
+      border: 1px solid rgba(121, 227, 255, 0.34);
+      box-shadow: 0 0 10px rgba(66, 193, 255, 0.18);
+    }
+
+    .preview-card h2 {
+      margin: 0 0 14px;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      color: #ffffff;
+      text-shadow: 0 0 10px rgba(255,255,255,0.18);
+    }
+
+    .preview-lead {
+      max-width: 860px;
+      margin: 0 auto 22px;
+      line-height: 1.8;
+      color: #dbeeff;
+      font-size: 1.03rem;
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+      text-align: left;
+    }
+
+    .preview-box {
+      background: rgba(8, 16, 34, 0.65);
+      border: 1px solid rgba(107, 190, 255, 0.20);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .preview-box h3 {
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+      color: #ffffff;
+    }
+
+    .preview-box p {
+      margin: 0 0 14px;
+      color: #d7ebff;
+      line-height: 1.7;
+      font-size: 0.97rem;
+    }
+
+    .preview-meta {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 0.86rem;
+      color: #9edfff;
+      font-style: italic;
+    }
+
+    .preview-audio {
+      width: 100%;
+      margin-top: 6px;
+    }
+
+    .preview-note {
+      margin-top: 24px;
+      color: #d5eeff;
+      font-size: 0.98rem;
+      line-height: 1.8;
+    }
+
+    .premium-divider {
+      max-width: 1100px;
+      margin: 18px auto 26px;
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        rgba(255,255,255,0),
+        rgba(111, 201, 255, 0.42),
+        rgba(255,255,255,0)
+      );
+    }
+
+    .pricing-card {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 36px 24px;
       background: linear-gradient(180deg, rgba(25, 51, 92, 0.95), rgba(11, 20, 41, 0.95));
       border-radius: 24px;
       border: 1px solid rgba(115, 205, 255, 0.35);
       box-shadow: 0 0 26px rgba(33, 174, 255, 0.12);
     }
 
+    .pricing-header h2 {
+      margin-bottom: 8px;
+    }
+
+    .pricing-sub {
+      color: #d9efff;
+      margin-bottom: 18px;
+    }
+
     .price-name {
-      font-size: 1.5rem;
+      font-size: 1.35rem;
       margin-bottom: 8px;
       font-weight: bold;
     }
@@ -246,16 +371,34 @@
       color: var(--text-soft);
     }
 
+    .founding-box {
+      margin: 16px 0 18px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, rgba(60,140,255,0.18), rgba(20,60,120,0.25));
+      border: 1px solid rgba(120,200,255,0.4);
+      color: #e8f7ff;
+      font-size: 0.98rem;
+      box-shadow: 0 0 12px rgba(60, 170, 255, 0.25);
+    }
+
+    .founding-sub {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.85rem;
+      color: #cfeeff;
+    }
+
     .price-note {
       color: #d3eeff;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       font-style: italic;
     }
 
     .feature-list {
       list-style: none;
       padding: 0;
-      margin: 0 0 26px;
+      margin: 0 0 24px;
       text-align: left;
     }
 
@@ -274,6 +417,12 @@
       top: 0;
       color: var(--accent-2);
       text-shadow: 0 0 8px rgba(105, 230, 255, 0.45);
+    }
+
+    .trust-line {
+      margin-top: 14px;
+      font-size: 0.92rem;
+      color: #dcefff;
     }
 
     .faq {
@@ -301,9 +450,14 @@
       max-width: none;
     }
 
-    .final-cta {
-      max-width: 900px;
-      margin: 0 auto;
+    .back-home {
+      margin: 40px auto 0;
+      text-align: center;
+    }
+
+    .final-cta .card {
+      background: linear-gradient(180deg, rgba(36, 71, 124, 0.98), rgba(16, 28, 56, 0.98));
+      box-shadow: 0 0 32px rgba(53, 170, 255, 0.14);
     }
 
     footer {
@@ -330,16 +484,18 @@
 
     @media (max-width: 640px) {
       .card,
-      .pricing-card {
+      .pricing-card,
+      .preview-card {
         padding: 26px 18px;
       }
 
-      .nav-btn {
+      .btn {
         min-width: 96px;
         padding: 11px 16px;
       }
 
       .hero p,
+      .hero-sub,
       .section p,
       .benefit-box p,
       .feature-list li {
@@ -352,45 +508,48 @@
   <div class="page-wrap">
 
     <nav class="site-nav">
-  <a class="btn" href="/index.html">Home</a>
-  <a class="btn" href="/voiceover.html">Voiceover</a>
-  <a class="btn" href="/portfolio.html">Portfolio</a>
-  <a class="btn" href="/writing-studio.html">Writing</a>
-  <a class="btn" href="/audiostories/">Audio Stories</a>
-
-  <!-- FEATURED -->
-  <a class="btn featured" href="/studio-access/">Studio Access</a>
-</nav>
+      <a class="btn" href="/index.html">Home</a>
+      <a class="btn" href="/voiceover.html">Voiceover</a>
+      <a class="btn" href="/portfolio.html">Portfolio</a>
+      <a class="btn" href="/writing-studio.html">Writing</a>
+      <a class="btn" href="/audiostories/">Audio Stories</a>
+      <a class="btn featured" href="/studio-access/">Studio Access</a>
+    </nav>
 
     <header class="hero">
       <div class="hero-tag">OFFICIAL SHARON CRADY™ MEMBERSHIP</div>
-      <h1>Studio Access</h1>
+      <h1>Enter the Studio</h1>
+      <p class="hero-sub">
+        A private creative space where my voice, stories, and real moments come to life — beyond the public.
+      </p>
       <p>
-  Welcome to my private membership space — a curated layer of Official Sharon Crady™
-  where exclusive audio, early releases, behind-the-scenes access, and reflective writing
-  come together in one premium creative experience.
-</p>
-<p>
-  Studio Access is for those who want to go deeper into the voice, the stories, the atmosphere,
-  and the evolving body of work I’m building.
-</p>
+        Welcome to my private membership space — a curated layer of Official Sharon Crady™
+        where exclusive audio, early releases, behind-the-scenes access, and reflective writing
+        come together in one premium creative experience.
+      </p>
+      <p>
+        Studio Access is for those who want to go deeper into the voice, the stories, the atmosphere,
+        and the evolving body of work I’m building.
+      </p>
       <div class="button-row">
-        <a class="cta-btn" href="#join">Join Studio Access</a>
+        <a class="cta-btn" href="#join">Lock In Founding Access</a>
         <a class="secondary-btn" href="#included">See What’s Included</a>
       </div>
     </header>
 
     <section class="section">
-      <div class="card">
-        <h2>A More Personal Creative Space</h2>
+      <div class="card why-join">
+        <h2>Why Studio Access Exists</h2>
         <p>
-          This membership is where I’ll share content that goes beyond the public pages of my website.
-          It’s a quieter, deeper layer of the brand — one that gives you access to exclusive releases,
-          first-listen content, creative process notes, and ongoing updates as new work takes shape.
+          Not everything I create is meant for the public. Some things are quieter, more personal,
+          and more immersive than what appears on the main site.
         </p>
         <p>
-          Whether you’re here for the storytelling, the voice, the reflections, or the overall journey,
-          Studio Access is built to give you a closer connection to what I’m creating.
+          Studio Access is where I share those moments — the stories, the voice recordings,
+          the reflections, and the creative atmosphere that do not always fit anywhere else.
+        </p>
+        <p class="highlight">
+          If you’ve ever felt connected to my voice or my energy, this is where it deepens.
         </p>
       </div>
     </section>
@@ -432,87 +591,97 @@
     </section>
 
     <section class="preview-section">
-  <div class="preview-card">
-    <div class="preview-kicker">MEMBER PREVIEW</div>
-    <h2>Step Inside the Experience</h2>
-    <p class="preview-lead">
-      Studio Access is designed to feel like a private layer of my creative world — more intimate,
-      more immersive, and more connected to the work as it unfolds.
-    </p>
-
-    <div class="preview-grid">
-      <div class="preview-box">
-        <span class="preview-meta">Exclusive Audio Preview</span>
-        <h3>Private Story Drops</h3>
-        <p>
-          Members will receive bonus audio pieces, early story releases, and private recordings
-          shared before public rollout.
+      <div class="preview-card">
+        <div class="preview-kicker">MEMBER PREVIEW</div>
+        <h2>Step Inside the Experience</h2>
+        <p class="preview-lead">
+          Studio Access is designed to feel like a private layer of my creative world — more intimate,
+          more immersive, and more connected to the work as it unfolds.
         </p>
-        <audio class="preview-audio" controls>
-          <source src="/audio/studio-access-preview.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-      </div>
 
-      <div class="preview-box">
-        <span class="preview-meta">Behind the Scenes</span>
-        <h3>Creative Notes & Process</h3>
-        <p>
-          Get access to the thoughts behind each project — what inspired it, how it evolved,
-          and what is coming next inside the studio.
+        <div class="preview-grid">
+          <div class="preview-box">
+            <span class="preview-meta">Exclusive Audio Preview</span>
+            <h3>Private Story Drops</h3>
+            <p>
+              Members will receive bonus audio pieces, early story releases, and private recordings
+              shared before public rollout.
+            </p>
+            <audio class="preview-audio" controls>
+              <source src="/audio/studio-access-preview.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+
+          <div class="preview-box">
+            <span class="preview-meta">Behind the Scenes</span>
+            <h3>Creative Notes & Process</h3>
+            <p>
+              Get access to the thoughts behind each project — what inspired it, how it evolved,
+              and what is coming next inside the studio.
+            </p>
+          </div>
+
+          <div class="preview-box">
+            <span class="preview-meta">Member Writing</span>
+            <h3>Reflections & Private Updates</h3>
+            <p>
+              Read members-only reflections, short essays, personal notes, and written glimpses into
+              the heart of the work behind Official Sharon Crady™.
+            </p>
+          </div>
+        </div>
+
+        <p class="preview-note">
+          This space is being built as a premium creative home for listeners, readers, and supporters
+          who want more than public posts — they want access to the process, the atmosphere, and the deeper layer.
         </p>
       </div>
+    </section>
 
-      <div class="preview-box">
-        <span class="preview-meta">Member Writing</span>
-        <h3>Reflections & Private Updates</h3>
-        <p>
-          Read members-only reflections, short essays, personal notes, and written glimpses into
-          the heart of the work behind Official Sharon Crady™.
+    <div class="premium-divider"></div>
+
+    <section id="join" class="section">
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h2>Join Studio Access</h2>
+          <p class="pricing-sub">
+            This space will continue to grow — early members will always have the advantage.
+          </p>
+        </div>
+
+        <div class="price-name">Studio Access Membership</div>
+        <div class="price-amount">$9<span>/month</span></div>
+
+        <div class="founding-box">
+          ✨ <strong>Founding Member Rate: $5/month</strong>
+          <span class="founding-sub">
+            Limited-time early access pricing. Lock in this rate for life when you join now.
+          </span>
+        </div>
+
+        <div class="price-note">
+          Simple, supportive, and designed to grow with you.
+        </div>
+
+        <ul class="feature-list">
+          <li>Exclusive members-only audio content</li>
+          <li>Early access to stories and creative releases</li>
+          <li>Behind-the-scenes updates from my process</li>
+          <li>Private written reflections and notes</li>
+          <li>Founding-member pricing locked in for early supporters</li>
+        </ul>
+
+        <div class="button-row">
+          <a class="cta-btn" href="mailto:YOUR-EMAIL-HERE">Lock In Founding Access</a>
+          <a class="secondary-btn" href="#included">Learn More</a>
+        </div>
+
+        <p class="trust-line">
+          Cancel anytime. No pressure — just access when you want it.
         </p>
       </div>
-    </div>
-
-    <p class="preview-note">
-      This space is being built as a premium creative home for listeners, readers, and supporters
-      who want more than public posts — they want access to the process, the atmosphere, and the deeper layer.
-    </p>
-  </div>
-</section>
-
-<div class="premium-divider"></div>
-
-    <div class="pricing-card">
-
-  <div class="price-name">Studio Access Membership</div>
-
-  <div class="price-amount">$9<span>/month</span></div>
-
-  <div class="founding-box">
-    ✨ <strong>Founding Member Rate: $5/month</strong><br>
-    <span class="founding-sub">
-      Limited-time early access pricing. Lock in this rate for life when you join now.
-    </span>
-  </div>
-
-  <div class="price-note">
-    Simple, supportive, and designed to grow with you.
-  </div>
-
-  <ul class="feature-list">
-    <li>Exclusive members-only audio content</li>
-    <li>Early access to stories and creative releases</li>
-    <li>Behind-the-scenes updates from my process</li>
-    <li>Private written reflections and notes</li>
-    <li>Founding-member access as this space evolves</li>
-  </ul>
-
-  <div class="button-row">
-    <a class="cta-btn" href="mailto:your@email.com">Join as Founding Member</a>
-    <a class="secondary-btn" href="/studio-access/#included">Learn More</a>
-  </div>
-
-</div>
+    </section>
 
     <section class="section">
       <div class="card">
@@ -550,6 +719,14 @@
         </div>
 
         <div class="faq-item">
+          <h3>Will founding members keep their lower price?</h3>
+          <p>
+            Yes. Founding members who join during the early access period will keep their lower price
+            as long as they remain subscribed.
+          </p>
+        </div>
+
+        <div class="faq-item">
           <h3>Can this membership grow later?</h3>
           <p>
             Absolutely. This is the foundation. Over time, Studio Access can expand into bonus drops,
@@ -559,10 +736,10 @@
       </div>
     </section>
 
-    <div class="back-home-wrap">
-  <a href="/index.html" class="back-home-btn">← Back to Home</a>
-</div>
-    
+    <div class="back-home">
+      <a href="/index.html" class="secondary-btn">← Back to Home</a>
+    </div>
+
     <section class="section final-cta">
       <div class="card">
         <h2>Support the Work. Enter the Studio.</h2>
@@ -571,7 +748,7 @@
           Studio Access is just the beginning.
         </p>
         <div class="button-row">
-          <a class="cta-btn" href="/contact.html">Become a Member</a>
+          <a class="cta-btn" href="mailto:YOUR-EMAIL-HERE">Become a Founding Member</a>
         </div>
       </div>
     </section>
@@ -579,15 +756,15 @@
     <footer>
       <div class="footer-links">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a> |
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a> |
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> |
         <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
       </div>
 
       <div>
-        <a href="/privacy-policy.html">Privacy Policy</a> |
-        <a href="/terms.html">Terms of Use</a> |
-        <a href="/affiliate-disclosure.html">Affiliate Disclosure</a>
+        <a href="/index.html">Home</a> |
+        <a href="/voiceover.html">Voiceover</a> |
+        <a href="/portfolio.html">Portfolio</a> |
+        <a href="/writing-studio.html">Writing</a>
       </div>
 
       <p class="tiny">
