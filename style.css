@@ -1710,12 +1710,13 @@ h2, h3 {
 
 /* Button style */
 .dropbtn {
-  background: none;
-  border: none;
-  color: inherit;
-  font: inherit;
-  cursor: pointer;
-  padding: 10px 15px;
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(145deg, #1e90ff, #00bfff);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* Dropdown content (hidden by default) */
@@ -1745,4 +1746,24 @@ h2, h3 {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-  
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #111;
+  min-width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
