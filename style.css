@@ -1819,3 +1819,7 @@ max-width: 700px;
   color: #ffffff;
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
