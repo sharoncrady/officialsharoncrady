@@ -94,6 +94,12 @@
 
   <p><strong>And this space is being built for you — step by step, right alongside you.</strong></p>
 </section>
+
+      <button onclick="scrollToExplore()" class="primary-btn">
+  Explore the Platform ↓
+</button>
+</header>
+      
       
       <section class="network-intro-audio">
   <audio controls preload="none">
@@ -107,9 +113,10 @@
         <a class="btn" href="https://forms.gle/REPLACE_WITH_YOUR_GOOGLE_FORM" target="_blank" rel="noopener">Request Early Access</a>
         <a class="btn secondary" href="#how-it-works">How it works</a>
       </div>
-    </header>
+    
 
     <!-- Value pillars -->
+    <section id="explore">
     <section class="section" id="how-it-works">
       <h2 style="margin:0 0 10px">What you’ll find here</h2>
       <p class="muted" style="margin-top:0">Created by Official Sharon Crady to fill the gap between “brand-new” and “booked and busy.”</p>
@@ -215,7 +222,14 @@
   <footer class="site-footer">
     <center><p>Designed &amp; built by Sharon Fitzgerald</p></center>
   </footer>
-</body>
   
-
-</html>
+  <script>
+function scrollToExplore() {
+  document.getElementById("explore").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+</script>
+  
+</body>
+  </html>
