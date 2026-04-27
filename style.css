@@ -1911,3 +1911,9 @@ html {
 .primary-btn:active {
   transform: scale(0.96);
 }
+
+
+.primary-btn {
+  background: linear-gradient(90deg, #00c6ff, #0072ff) !important;
+  color: #fff !important;
+}
