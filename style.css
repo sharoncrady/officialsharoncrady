@@ -1825,15 +1825,6 @@ html {
 }
 
 
-.primary-btn {
-  transition: all 0.25s ease;
-}
-
-.primary-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 150, 255, 0.25);
-}
-
 
 .card {
   transition: all 0.3s ease;
@@ -1844,7 +1835,27 @@ html {
   box-shadow: 0 10px 30px rgba(0, 150, 255, 0.15);
 }
 
+
+.primary-btn {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 114, 255, 0.35);
+  transition: all 0.25s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 114, 255, 0.5);
+}
+
 .primary-btn:active {
   transform: scale(0.96);
 }
-
