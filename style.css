@@ -1823,3 +1823,28 @@ max-width: 700px;
 html {
   scroll-behavior: smooth;
 }
+
+
+.primary-btn {
+  transition: all 0.25s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 150, 255, 0.25);
+}
+
+
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 150, 255, 0.15);
+}
+
+.primary-btn:active {
+  transform: scale(0.96);
+}
+
