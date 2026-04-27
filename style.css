@@ -1787,3 +1787,18 @@ h2, h3 {
   opacity: 0.92;
 }
   
+
+max-width: 700px;
+  margin-top: 30px;
+  line-height: 1.7;
+  color: #d1d5db;
+}
+
+.founder-note h2 {
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.founder-note p {
+  margin-bottom: 14px;
+}
