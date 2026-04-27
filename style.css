@@ -1950,3 +1950,10 @@ html {
 .audio-card audio {
   width: 100%;
 }
+
+
+.audio-card audio {
+  width: 100%;
+  filter: brightness(0.9) contrast(1.05);
+  border-radius: 12px;
+}
