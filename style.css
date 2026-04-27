@@ -1981,3 +1981,11 @@ audio {
   color: #aaa;
   margin-bottom: 8px;
 }
+
+
+.cta-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
