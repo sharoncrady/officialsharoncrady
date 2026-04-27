@@ -1966,23 +1966,6 @@ audio {
 }
 
 
-.audio-card {
-  margin-top: 16px;
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  backdrop-filter: blur(6px);
-  max-width: 520px;
-}
-
-.audio-label {
-  font-size: 14px;
-  color: #aaa;
-  margin-bottom: 8px;
-}
-
-
 .cta-row {
   display: flex;
   gap: 12px;
