@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Interactive Story - The Choice</title>
+
+<style>
+  body {
+    background: #0f172a;
+    color: #e5e7eb;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .story-box {
+    max-width: 600px;
+    margin: auto;
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  #story-text {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background: #ec4899;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(236,72,153,0.7);
+  }
+</style>
+
+</head>
+<body>
+
+<div class="story-box">
+
+  <h1>Chapter One: The Voice Behind You</h1>
+
+  <p id="story-text">
+    You hear his voice behind you, low… steady… dangerous.
+    <br><br>
+    “Don’t walk away from me.”
+  </p>
+
+  <!-- OPTIONAL AUDIO (you can add your voice later) -->
+  <!--
+  <audio controls>
+    <source src="audio/intro.mp3" type="audio/mpeg">
+  </audio>
+  -->
+
+  <button onclick="turnAround()">Turn around</button>
+  <button onclick="keepWalking()">Keep walking</button>
+
+</div>
+
+<script>
+
+function turnAround() {
+  document.getElementById("story-text").innerHTML = `
+    You turn slowly… your heart racing.
+
+    He’s closer than you expected.
+
+    His eyes lock onto yours like he’s been waiting for this moment.
+
+    “There you are…” he says softly.
+
+    <br><br>
+    You feel it now — whatever this is… it’s not simple.
+  `;
+}
+
+function keepWalking() {
+  document.getElementById("story-text").innerHTML = `
+    You keep walking.
+
+    One step. Then another.
+
+    But his presence follows you… like heat at your back.
+
+    “If you walk away now…” he calls out, quieter this time,
+    “you’re going to regret it.”
+
+    <br><br>
+    And somehow… you believe him.
+  `;
+}
+
+</script>
+
+</body>
+</html>
