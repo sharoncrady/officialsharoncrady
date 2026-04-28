@@ -1349,7 +1349,7 @@ audio.osc-blue-player::-webkit-media-controls-volume-slider {
    OCEAN BLUE NAV BUTTONS • Official Sharon Crady
 -------------------------------------------- */
 
-.site-nav .btn {
+nav button {
     background: linear-gradient(135deg, #1e88e5, #1565c0); /* Ocean Blue gradient */
     color: #ffffff;
     padding: 10px 18px;
