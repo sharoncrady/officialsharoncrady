@@ -38,7 +38,7 @@ footer {
 }
 
 
-nav button {
+.site-nav .btn {
   background: linear-gradient(135deg, #007bff, #0056d6);
   border: none;
   color: white;
@@ -54,7 +54,7 @@ nav button {
   box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
 }
 
-nav button:hover {
+.site-nav .btn:hover {
   transform: translateY(-2px) scale(1.03);
   box-shadow: 0 0 20px rgba(56, 189, 248, 0.7);
 }
@@ -65,7 +65,7 @@ nav button:hover {
   max-width: 800px; /* keeps it from being too wide */
 }
 
-nav button:hover {
+.site-nav .btn:hover {
   background-color: #45a049;
 }
 
