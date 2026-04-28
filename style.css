@@ -1978,3 +1978,9 @@ audio {
   margin-top: 14px;
   flex-wrap: wrap;
 }
+
+
+.btn.featured {
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+  box-shadow: 0 0 6px rgba(21, 101, 192, 0.55);
+}
