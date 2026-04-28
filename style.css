@@ -39,7 +39,7 @@ footer {
 
 
 nav button {
-  background-color: #4CAF50; /* Green */
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
   border: none;
   color: white;
   padding: 10px 20px;
@@ -48,10 +48,16 @@ nav button {
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
 }
 
+nav button:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.7);
+}
 
 .about {
   text-align: center;
