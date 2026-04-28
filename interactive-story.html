@@ -66,6 +66,7 @@
   mask-composite: exclude;
 
   opacity: 0.35;
+  animation: fadeIn 0.6s ease;
 }
 
 
@@ -80,6 +81,7 @@
   h1 {
     margin-bottom: 12px;
     font-size: 34px;
+    text-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
   }
 
   .subtitle {
@@ -120,6 +122,7 @@ button:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 0 24px rgba(56, 189, 248, 0.75);
   border-color: rgba(191, 219, 254, 0.9);
+  transform: translateY(-2px) scale(1.02);
 }
 
  .secondary-btn {
@@ -139,6 +142,18 @@ button:hover {
     color: #94a3b8;
     font-size: 14px;
   }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  
 </style>
 </head>
 
