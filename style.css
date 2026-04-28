@@ -1362,7 +1362,7 @@ nav button {
 }
 
 /* Hover effect */
-.site-nav .btn:hover {
+nav button:hover {
     background: linear-gradient(135deg, #42a5f5, #1e88e5); /* Lighter ocean glow */
     border-color: #1976d2;
     box-shadow: 0 0 10px rgba(66, 165, 245, 0.8);
@@ -1370,7 +1370,7 @@ nav button {
 }
 
 /* Active (clicked) state */
-.site-nav .btn:active {
+nav .button:active {
     transform: scale(0.97);
 }
 
