@@ -2,116 +2,300 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Interactive Story - The Choice</title>
+<title>Interactive Story - The Voice Behind You</title>
 
 <style>
   body {
-    background: #0f172a;
+    background: linear-gradient(135deg, #07172a, #102f57, #2b1645);
     color: #e5e7eb;
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 40px;
+    min-height: 100vh;
+  }
+
+  .back-home {
+    margin-bottom: 20px;
+  }
+
+  .back-home a {
+    color: #c084fc;
+    text-decoration: underline;
+    font-size: 16px;
   }
 
   .story-box {
-    max-width: 600px;
+    max-width: 700px;
     margin: auto;
-    background: #1e293b;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    background: rgba(30, 41, 59, 0.85);
+    padding: 36px;
+    border-radius: 18px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.45);
+    border: 1px solid rgba(255,255,255,0.15);
   }
 
   h1 {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
+    font-size: 34px;
+  }
+
+  .subtitle {
+    color: #cbd5e1;
+    font-size: 16px;
+    margin-bottom: 26px;
   }
 
   #story-text {
     font-size: 18px;
-    margin-bottom: 30px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+
+  .choices {
+    margin-top: 22px;
   }
 
   button {
     display: block;
-    width: 80%;
-    margin: 10px auto;
-    padding: 12px;
+    width: 85%;
+    max-width: 500px;
+    margin: 12px auto;
+    padding: 14px 20px;
     font-size: 16px;
     border: none;
-    border-radius: 25px;
-    background: #ec4899;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #ec4899, #f472b6);
     color: white;
     cursor: pointer;
-    transition: 0.2s ease;
+    font-weight: 700;
+    transition: 0.25s ease;
   }
 
   button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(236,72,153,0.7);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 0 18px rgba(236, 72, 153, 0.7);
+  }
+
+  .secondary-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.45);
+    color: #e5e7eb;
+  }
+
+  .soft-note {
+    margin-top: 26px;
+    color: #94a3b8;
+    font-size: 14px;
   }
 </style>
-
 </head>
+
 <body>
-  
- <div class="back-home">
-  <a href="/">← Back to Home</a>
-</div>
-<div class="story-box">
 
-  <h1>Chapter One: The Voice Behind You</h1>
+  <div class="back-home">
+    <a href="index.html">← Back to Home</a>
+  </div>
 
-  <p id="story-text">
-    You hear his voice behind you, low… steady… dangerous.
-    <br><br>
-    “Don’t walk away from me.”
-  </p>
+  <div class="story-box">
 
-  <!-- OPTIONAL AUDIO (you can add your voice later) -->
-  <!--
-  <audio controls>
-    <source src="audio/intro.mp3" type="audio/mpeg">
-  </audio>
-  -->
+    <h1>Chapter One: The Voice Behind You</h1>
 
-  <button onclick="turnAround()">Turn around</button>
-  <button onclick="keepWalking()">Keep walking</button>
+    <p class="subtitle">
+      An Official Sharon Crady™ interactive story experience.
+    </p>
 
-</div>
+    <p id="story-text">
+      You hear his voice behind you, low… steady… dangerous.
+      <br><br>
+      “Don’t walk away from me.”
+    </p>
+
+    <div id="choices" class="choices">
+      <button onclick="turnAround()">Turn around</button>
+      <button onclick="keepWalking()">Keep walking</button>
+    </div>
+
+    <p class="soft-note">
+      Choose carefully. Every choice changes the emotional path.
+    </p>
+
+  </div>
 
 <script>
+function setScene(text, buttons) {
+  document.getElementById("story-text").innerHTML = text;
+  document.getElementById("choices").innerHTML = buttons;
+}
 
 function turnAround() {
-  document.getElementById("story-text").innerHTML = `
+  setScene(`
     You turn slowly… your heart racing.
-
+    <br><br>
     He’s closer than you expected.
-
+    <br><br>
     His eyes lock onto yours like he’s been waiting for this moment.
-
-    “There you are…” he says softly.
-
+    <br><br>
+    “There you are,” he says softly.
     <br><br>
     You feel it now — whatever this is… it’s not simple.
-  `;
+  `,
+  `
+    <button onclick="stayWithHim()">Stay with him</button>
+    <button onclick="pullAway()">Pull away</button>
+  `);
 }
 
 function keepWalking() {
-  document.getElementById("story-text").innerHTML = `
+  setScene(`
     You keep walking.
-
+    <br><br>
     One step. Then another.
-
+    <br><br>
     But his presence follows you… like heat at your back.
-
-    “If you walk away now…” he calls out, quieter this time,
+    <br><br>
+    “If you walk away now,” he calls out, quieter this time,
     “you’re going to regret it.”
-
     <br><br>
     And somehow… you believe him.
-  `;
+  `,
+  `
+    <button onclick="stopWalking()">Stop</button>
+    <button onclick="keepGoing()">Keep going</button>
+  `);
 }
 
+function stayWithHim() {
+  setScene(`
+    You don’t move.
+    <br><br>
+    The silence stretches between you.
+    <br><br>
+    He steps closer, but not enough to touch you.
+    <br><br>
+    “I’m not here to stop you,” he says.
+    <br><br>
+    “I’m here because you deserve to know the truth.”
+  `,
+  `
+    <button onclick="askTruth()">Ask him what truth</button>
+    <button onclick="endScene()">End this chapter</button>
+  `);
+}
+
+function pullAway() {
+  setScene(`
+    You take a step back.
+    <br><br>
+    His expression changes — not anger, not rejection.
+    <br><br>
+    Something softer.
+    <br><br>
+    “You’re afraid,” he says.
+    <br><br>
+    And the worst part is… he’s right.
+  `,
+  `
+    <button onclick="askAfraid()">Ask how he knows</button>
+    <button onclick="endScene()">End this chapter</button>
+  `);
+}
+
+function stopWalking() {
+  setScene(`
+    You stop.
+    <br><br>
+    Your breath catches.
+    <br><br>
+    You already know you’re going to turn around.
+    <br><br>
+    Not because he told you to.
+    <br><br>
+    Because something inside you needs to know why he came back.
+  `,
+  `
+    <button onclick="turnAround()">Turn around</button>
+    <button onclick="endScene()">End this chapter</button>
+  `);
+}
+
+function keepGoing() {
+  setScene(`
+    You keep going.
+    <br><br>
+    But your heart isn’t in it anymore.
+    <br><br>
+    Behind you, he says nothing else.
+    <br><br>
+    And somehow, that silence feels louder than his voice.
+  `,
+  `
+    <button onclick="lookBack()">Look back once</button>
+    <button onclick="endScene()">End this chapter</button>
+  `);
+}
+
+function askTruth() {
+  setScene(`
+    “What truth?” you ask.
+    <br><br>
+    He looks away for the first time.
+    <br><br>
+    “That you were never the one who broke everything.”
+    <br><br>
+    Your chest tightens.
+    <br><br>
+    Because that sentence changes everything.
+  `,
+  `
+    <button onclick="endScene()">Continue in Chapter Two</button>
+  `);
+}
+
+function askAfraid() {
+  setScene(`
+    “How would you know that?” you ask.
+    <br><br>
+    He gives you a sad smile.
+    <br><br>
+    “Because I was there when you learned to hide it.”
+    <br><br>
+    For a moment, the world goes completely still.
+  `,
+  `
+    <button onclick="endScene()">Continue in Chapter Two</button>
+  `);
+}
+
+function lookBack() {
+  setScene(`
+    You look back once.
+    <br><br>
+    He’s still standing there.
+    <br><br>
+    Not chasing.
+    <br><br>
+    Not begging.
+    <br><br>
+    Just waiting… like he knows this story isn’t over.
+  `,
+  `
+    <button onclick="endScene()">Continue in Chapter Two</button>
+  `);
+}
+
+function endScene() {
+  setScene(`
+    <strong>End of Chapter One.</strong>
+    <br><br>
+    Some stories don’t begin with a kiss.
+    <br><br>
+    Some begin with a choice.
+  `,
+  `
+    <button onclick="location.reload()">Replay Chapter One</button>
+    <button class="secondary-btn" onclick="window.location.href='index.html'">Back to Home</button>
+  `);
+}
 </script>
 
 </body>
